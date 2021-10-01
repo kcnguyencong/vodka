@@ -48,7 +48,7 @@ button:focus{outline: 0px #6599FF solid;}
 .about{ padding:  80px 0px; font-size: 0;}
 .about-image{width:400px; padding-right: 50px; display: inline-block; vertical-align: top;}
 .about-image img{max-width:100%;}
-.about-desc{ font-size: 18px; line-height: 28px; color: #282a2b; display: inline-block; width:calc(100% - 400px - 50px);}
+.about-desc{ font-size: 18px; line-height: 34px; color: #717171; display: inline-block; width:calc(100% - 400px - 50px);}
 .about-desc h2{font-size: 28px; font-weight: bold; padding-bottom: 20px;}
 .about-desc p{padding-bottom: 18px;}
 
