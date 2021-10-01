@@ -7,7 +7,7 @@ small, strong, sub, sup, var,
 b, u, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, hr {margin: 0; padding: 0; border: 0; outline: 0; vertical-align: baseline; font-family: 'Noto Sans Display', sans-serif; color: #3D3D3D; font-size: 16px;}
+table, caption, tbody, tfoot, thead, tr, th, td, hr {margin: 0; padding: 0; border: 0; outline: 0; vertical-align: baseline; font-family: 'Noto Sans Display', sans-serif; color: #3D3D3D;}
 ol, ul {list-style: none;}
 blockquote, q {quotes: none;}
 fieldset{border: 0; margin: 0; padding: 0;}
@@ -84,3 +84,27 @@ button:focus{outline: 0px #6599FF solid;}
 #prj3 h3, #prj3 p, #prj3 h5,
 #prj4 h3, #prj4 p, #prj4 h5
 {color: #25252d;}
+@media only screen  and (min-width: 768px)  and (max-width: 1024px){
+    .container{width:100%;}
+    .about{width:100%; padding: 80px 0px;}
+    .about-image{vertical-align:top}
+}
+@media screen and (max-width: 600px) {
+    .container{width:100%;}
+    .work-item{ width: 100%; margin: 20px 0px;}
+    .work-list{margin:50px 0px;}
+    .nav-link{font-size: 14px;}
+    .profile-info{display:inline-block; position: relative; width:100%;}
+    .navigation{position: relative; width:100%; top:100px; margin-bottom: 50px;}
+    .contact, .resume{margin-left:0;}
+    .profile-info .profile-picture{position: absolute; display: inline-block; top:20px; left:0px; margin:0px 10px 0px 0px;}
+    .summary{position: absolute; top:20px; left:60px;}
+    .summary, .summary .name{ display: block; text-align:left; font-size:18px;}
+    .summary .position{font-size: 16px;}
+    .nav-link{margin-right:18px; font-size: 18px;}
+    .nav-link a{min-height: 50px;}
+    .about{width:100%; padding:80px 0px;}
+    .about-image{padding-right: 0px;}
+    .about-desc{width:100%; padding-top:40px;}
+}
+}
