@@ -70,7 +70,7 @@ button:focus{outline: 0px #6599FF solid;}
     transition: all .3s ease;
     -moz-transition: all .3s ease;
     -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;}
+    -o-transition: all .3s ease; border-radius: 20px;}
 .work-item .work-inner:hover .work-hover{opacity: 1;}
 .work-item .work-inner .work-content{position: absolute; max-width:90%; text-align: center; transform:  translate(-50%, -50%); font-size: 16px; color: #FFF; top: 50%; left: 50%; z-index: 11;}
 .work-item .work-inner .work-content h3{font-size: 18px; font-weight: 700; padding-bottom: 15px; color: #FFF; }
