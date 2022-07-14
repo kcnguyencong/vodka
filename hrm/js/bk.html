@@ -1,0 +1,16 @@
+$(function(){
+  $('.scrollable').on('scroll', function() {
+    if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+        $("#changetabbutton").trigger('click');
+    }
+  })
+  $('#changetabbutton').click(function(e){
+    e.preventDefault();
+    var next_tab = $('.nav-tabs > .active').next('li').find('a');
+    if(next_tab.length>0){
+      next_tab.trigger('click');
+    }else{
+      $('.nav-tabs li:eq(0) a').trigger('click');
+    }
+  });
+});

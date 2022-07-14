@@ -1,0 +1,1460 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png"> -->
+
+    <title>Creat Profile</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/hrm.css" rel="stylesheet">
+    <link href="css/themify-icons.css" rel="stylesheet" />
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    </div>
+    <div class="layout-hrm" id="layoutSidenav">
+      <div class="sidebar">
+        <nav class="sb-sidenav accordion sb-sidenav-itg">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <div class="sb-sidenav-menu-heading">Nhân sự</div>
+                    <a class="nav-link active" href="#">
+                        <div class="sb-nav-link-icon"><i class="ti-agenda"></i></div>
+                        <div class="sidemenu-item-title">Hồ sơ nhân sự</div>
+                        <div class="sidemenu-item-label">Hồ sơ</div>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <div class="sb-nav-link-icon"><i class="ti-calendar"></i></div>
+                        <div class="sidemenu-item-title">Ngày công, phép</div>
+                        <div class="sidemenu-item-label">Công, phép</div>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <div class="sb-nav-link-icon"><i class="ti-stats-up"></i></div>
+                        <div class="sidemenu-item-title">Thông tin doanh số</div>
+                        <div class="sidemenu-item-label">Doanh số</div>
+                    </a>
+                    <!-- Sidebar Toggle-->
+                    <div class="btn-toogle" id="sidebarToggle" ><div class="btn-bg"><i class="ti-angle-left"></i></div></div>
+                </div>
+            </div>
+        </nav>
+      </div>
+      <div class="content" id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-lg-12 col-md-12">
+                <div class="bg-image" style="background-image: url('assets/img/bgprofile.jpg');">
+                    <div class="bg-black-50">
+                      <div class="text-center profile-head">
+                        <div class="avatar mt-2">
+                          <div class="avatar-block">
+                            <div class="outer" style="background-image: url('assets/img/avatar1.jpg');">
+                              <div class="inner">
+                                <input class="inputfile" type="file" name="pic" accept="image/*">
+                                <label><i class="ti-instagram icon-change"></i></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="text-white mb-0">Phan Minh Châu</h4>
+                        <span class="text-white-75 profile-position">Trưởng nhóm kinh doanh - Phòng kinh doanh khu vực Miền Bắc</span>
+                      </div>
+                    </div>
+                    <div class="cover-block"><button type="button" class="btn btn-sm btn-outline-white" data-toggle="modal" data-target="#modal-cover"><i class="ti-instagram mr-05"></i>Cập nhật ảnh bìa</button></div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-lg-12 col-md-12">
+                <div class="block block-rounded">
+                  <ul class="nav nav-tabs nav-tabs-block">
+                    <li class="active"><a href="#btabs-static-profile" data-toggle="tab">Sơ yếu lý lịch</a></li>
+                    <li><a href="#btabs-static-work" data-toggle="tab">Công việc</a></li>
+                    <li><a href="#btabs-static-strong" data-toggle="tab">Sức khỏe &amp; Bảo hiểm</a></li>
+                    <li><a href="#btabs-static-benefit" data-toggle="tab">Lương &amp; Tài khoản ngân hàng</a></li>
+                    <li><a href="#btabs-static-award" data-toggle="tab">Khen thưởng, Kỷ luật</a></li>
+                    <li><a href="#btabs-static-accident" data-toggle="tab">Thống kê tai nạn</a></li>
+                  </ul>
+
+                  <div class="tab-content">
+                    <button id="changetabbutton">Click</button>
+                    <!---Sơ yếu lý lịch start--->
+                    <div class="tab-pane active" id="btabs-static-profile">
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Thông tin cá nhân</h3>
+                          </div>
+                          <div class="block-content block-content-full">
+                            <div class="row mb-2">
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Mã DVCS</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="0000000000" readonly>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Mã nhân viên</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="0000000000" readonly>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Họ và tên <span class="text-red">*</span></label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="Phan Minh Châu">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Giới tính</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">Nam</option>
+                                    <option value="2">Nữ</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <div class="row mb-2">
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Ngày sinh</label>
+                                  <input type="text" class="form-control form-control-sm" id="" name=" placeholder="dd-mm-yyyy">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Quốc tịch</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                  </select>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Dân tộc</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                  </select>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Tôn giáo</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="example-ltf-email">Số điện thoại</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="example-ltf-email">Email</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="">
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Địa chỉ</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                              <div class="row mb-2">
+                                <div class="col-lg-12 col-md-12"><h6>Hộ khẩu thường trú</h6></div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Tỉnh/ Thành Phố</label>
+                                    <select class="form-control form-control-sm" name="">
+                                      <option selected="">Chọn</option>
+                                      <option value="1">..</option>
+                                      <option value="2">..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Quận/ Huyện</label>
+                                    <select class="form-control form-control-sm" name="">
+                                      <option selected="">Chọn</option>
+                                      <option value="1">..</option>
+                                      <option value="2">..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Phường/ Xã</label>
+                                    <select class="form-control form-control-sm" name="">
+                                      <option selected="">Chọn</option>
+                                      <option value="1">..</option>
+                                      <option value="2">..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Số nhà, đường, KP, thôn/xóm, ấp...  </label>
+                                    <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="">
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-lg-12 col-md-12"><h6>Nơi ở hiện tại</h6></div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Tỉnh/ Thành Phố</label>
+                                    <select class="form-control form-control-sm" name="">
+                                      <option selected="">Chọn</option>
+                                      <option value="1">..</option>
+                                      <option value="2">..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Quận/ Huyện</label>
+                                    <select class="form-control form-control-sm" name="">
+                                      <option selected="">Chọn</option>
+                                      <option value="1">..</option>
+                                      <option value="2">..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Phường/ Xã</label>
+                                    <select class="form-control form-control-sm" name="">
+                                      <option selected="">Chọn</option>
+                                      <option value="1">..</option>
+                                      <option value="2">..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Số nhà, đường, KP, thôn/xóm, ấp...  </label>
+                                    <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="">
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Giấy tờ tuỳ thân</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                            <div class="row mb-2">
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Loại giấy tờ</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">CMND</option>
+                                    <option value="2">CCCD</option>
+                                    <option value="3">Hộ Chiếu</option>
+                                  </select>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Số giấy tờ</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="" value="">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Ngày cấp</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value="">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Nơi cấp</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="Nơi cấp" value="">
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="btn-plus">
+                                  <button type="button" class="btn btn-sm btn-outline-primary"><i class="ti-plus mr-05"></i>Thêm giấy tờ</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Trình độ học vấn</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                            <div class="row mb-2">
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Trình độ văn hóa</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="" value="">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Trình độ chuyên môn</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="" value="">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Hệ đào tạo</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">..</option>
+                                    <option value="2">..</option>
+                                  </select>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Đơn vị đào tạo</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="" value="">
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Chuyên ngành</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">..</option>
+                                    <option value="2">..</option>
+                                  </select>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Năm tốt nghiệp</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">..</option>
+                                    <option value="2">..</option>
+                                  </select>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Xếp loại</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">..</option>
+                                    <option value="2">..</option>
+                                  </select>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="block block-rounded">
+                        <div class="block-header block-header-default">
+                          <h3 class="block-title">Kinh nghiệm làm việc</h3>
+                        </div>      
+                        <div class="block-content block-content-full">
+                          <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                              <div class="block block-rounded block-bordered">
+                                <div class="block-content">
+                                  <div class="row mb-2">
+                                    <div class="col-lg-3 col-md-6">
+                                        <label class="form-label" for="">Từ tháng</label>
+                                        <input type="text" class="form-control form-control-sm" id="" name="" placeholder="mm-yyyy">
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <label class="form-label" for="">Đến tháng</label>
+                                        <input type="text" class="form-control form-control-sm" id="" name="" placeholder="mm-yyyy">
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <label class="form-label" for="">Làm việc tại</label>
+                                        <input type="text" class="form-control form-control-sm" name="" placeholder="" value="">
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <label class="form-label" for="">Vị trí công việc</label>
+                                        <input type="text" class="form-control form-control-sm" name="" placeholder="" value="">
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-lg-6 col-md-12">
+                                        <label class="form-label" for="">Mô tả công việc</label>
+                                        <textarea class="form-control" cols="10" rows="2"></textarea>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                              <div class="btn-plus">
+                                <button type="button" class="btn btn-sm btn-outline-primary"><i class="ti-plus mr-05"></i>Thêm kinh nghiệm</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block block-rounded">
+                        <div class="block-header block-header-default">
+                          <h3 class="block-title">Bằng cấp, chứng chỉ, kỹ năng</h3>
+                        </div>      
+                        <div class="block-content block-content-full">
+                          <div class="row">
+                            <div class="col-lg-6">
+                              <div class="block block-rounded block-bordered">
+                                <div class="block-header border-bottom">
+                                  <h3 class="block-title">Bằng cấp chứng chỉ</h3>
+                                  <div class="block-options">
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal-block-award"><i class="ti-pencil-alt mr-05"></i>Cập nhật</button>
+                                  </div>
+                                </div>
+                                <div class="block-content">
+                                  <div class="row items-push">
+                                    <div class="col-md-12">
+                                      <div class="text-muted font-s13">
+                                        Chưa có thông tin Bằng cấp, chứng chỉ, vui lòng cập nhật
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6">
+                              <div class="block block-rounded block-bordered">
+                                <div class="block-header border-bottom">
+                                  <h3 class="block-title">Kỹ năng</h3>
+                                  <div class="block-options">
+                                    <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal-block-skill"><i class="ti-pencil-alt mr-05"></i>Cập nhật</button>
+                                  </div>
+                                </div>
+                                <div class="block-content">
+                                  <div class="row items-push">
+                                    <div class="col-md-12">
+                                      <div class="text-muted font-s13">
+                                        Chưa có thông tin Kỹ năng, vui lòng cập nhật
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Thông tin nhân thân</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                            <div class="row mb-2">
+                              <div class="col-lg-12 col-md-12">
+                                <div class="table-responsive">
+                                    <table id="" class="table table-bordered user-details">
+                                      <thead>
+                                        <tr>
+                                          <th class="text-center">STT</th>
+                                          <th class="text-left">Họ và tên</th>
+                                          <th class="text-left">Quan hệ</th>
+                                          <th class="text-left">Ngày sinh</th>
+                                          <th class="text-left">Giới tính</th>
+                                          <th class="text-left">MST</th>
+                                          <th class="text-left">CMND/CCCD</th>
+                                          <th class="text-left">Điện thoại</th>
+                                          <th class="text-left">Giảm trừ GC</th>
+                                          <th class="text-left">Ngày bắt đầu</th>
+                                          <th class="text-left">Ngày kết thúc</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="text-center">1</td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="" value=""></td>
+                                          <td class="text-left">
+                                            <select class="form-control form-control-sm w80" name="">
+                                              <option selected="">Chọn</option>
+                                              <option value="1">Nam</option>
+                                              <option value="2">Nữ</option>
+                                            </select>
+                                          </td>
+                                          <td class="text-left">
+                                            <input type="text" class="form-control form-control-sm" name="" placeholder="" value="">
+                                          </td>
+                                          <td class="text-left">
+                                             <select class="form-control form-control-sm w80" name="">
+                                              <option selected="">Chọn</option>
+                                              <option value="1">Nam</option>
+                                              <option value="2">Nữ</option>
+                                            </select>
+                                          </td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="" value=""></td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="" value=""></td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="" value=""></td>
+                                          <td class="text-left">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="checkbox" value="" id="checkbox-default1" name="">
+                                              <label class="form-check-label font-s13" for="checkbox-default1">Có</label>
+                                            </div>
+                                          </td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value=""></td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value=""></td>
+                                        </tr>
+                                        <tr>
+                                          <td class="text-center">2</td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="" value=""></td>
+                                          <td class="text-left">
+                                            <select class="form-control form-control-sm w80" name="">
+                                              <option selected="">Chọn</option>
+                                              <option value="1">Nam</option>
+                                              <option value="2">Nữ</option>
+                                            </select>
+                                          </td>
+                                          <td class="text-left">
+                                            <input type="text" class="form-control form-control-sm" name="" placeholder="" value="">
+                                          </td>
+                                          <td class="text-left">
+                                             <select class="form-control form-control-sm w80" name="">
+                                              <option selected="">Chọn</option>
+                                              <option value="1">Nam</option>
+                                              <option value="2">Nữ</option>
+                                            </select>
+                                          </td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="" value=""></td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="" value=""></td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="" value=""></td>
+                                          <td class="text-left">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="checkbox" value="" id="checkbox-default2" name="checkbox-default2">
+                                              <label class="form-check-label font-s13" for="checkbox-default2">Có</label>
+                                            </div>
+                                          </td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value=""></td>
+                                          <td class="text-left"><input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value=""></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12">
+                                <div class="btn-plus">
+                                  <button type="button" class="btn btn-sm btn-outline-primary"><i class="ti-plus mr-05"></i>Thêm nhân thân</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="bottom-action">
+                        <button type="button" class="btn btn-light">Hủy bỏ</button>
+                        <button type="button" class="btn btn-primary"><i class="ti-save mr-05"></i>Lưu thông tin</button>
+                      </div>
+                    </div>
+                    <!---Sơ yếu lý lịch end--->
+                    <!---Công việc start--->
+                    <div class="tab-pane " id="btabs-static-work">
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Công việc</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                            <div class="row mb-2">
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Trạng thái nhân viên</label>
+                                  <div class="data-user"><span class="d-inline-block rounded-pill bg-available text-white label-type">Đang làm việc</span></div>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Số thẻ ra vào</label>
+                                  <div class="data-user">000000000000</div>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Ngày vào thử việc</label>
+                                  <div class="data-user">dd/mm/yyy</div>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Ngày kết thúc thử việc</label>
+                                  <div class="data-user">dd/mm/yyy</div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Ngày vào chính thức</label>
+                                  <div class="data-user">dd/mm/yyy</div>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Ngày nghỉ</label>
+                                  <div class="data-user">dd/mm/yyy</div>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Lý do nghỉ</label>
+                                  <div class="data-user"></div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Thông tin Công việc theo luật</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                            <div class="row mb-3">
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Đối tượng</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">..</option>
+                                    <option value="2">..</option>
+                                  </select>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Tình trạng cư trú</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">..</option>
+                                    <option value="2">..</option>
+                                  </select>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Tình trạng hôn nhân</label>
+                                  <select class="form-control form-control-sm" name="">
+                                    <option selected="">Chọn</option>
+                                    <option value="1">..</option>
+                                    <option value="2">..</option>
+                                  </select>
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">MST cá nhân</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="Nhập mã số thuế cá nhân" value="">
+                              </div>
+                            </div>
+                            <div class="bottom-action">
+                              <button type="button" class="btn btn-primary"><i class="ti-save mr-05"></i>Lưu thông tin</button>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="block block-rounded">
+                        <div class="block-header block-header-default">
+                          <h3 class="block-title">Quá trình làm việc</h3>
+                        </div>      
+                        <div class="block-content block-content-full">
+                          <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                              <div class="table-responsive">
+                                  <table id="" class="table table-bordered user-details">
+                                    <thead>
+                                      <tr>
+                                        <th class="text-center">STT</th>
+                                        <th class="text-left">Mã ĐVCS</th>
+                                        <th class="text-left">Bộ phận</th>
+                                        <th class="text-left">Chức vụ</th>
+                                        <th class="text-left">Vị trí làm việc</th>
+                                        <th class="text-left">Hành động</th>
+                                        <th class="text-right">Ngày bắt đầu</th>
+                                        <th class="text-right">Ngày kết thúc</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="text-center">1</td>
+                                        <td class="text-left">01</td>
+                                        <td class="text-left">Kinh Doanh Miền Bắc</td>
+                                        <td class="text-left">Trưởng Phòng Kinh Doanh</td>
+                                        <td class="text-left">Trưởng Phòng</td>
+                                        <td class="text-left">0000000000</td>
+                                        <td class="text-right">dd/mm/yyyy</td>
+                                        <td class="text-right">dd/mm/yyyy</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Thông tin hợp đồng</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                              <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                  <div class="table-responsive">
+                                    <table id="" class="table table-bordered user-details">
+                                      <thead>
+                                        <tr>
+                                          <th class="text-center">STT</th>
+                                          <th class="text-left">Số hợp đồng</th>
+                                          <th class="text-left">Tên hợp đồng</th>
+                                          <th class="text-left">Loại hợp đồng</th>
+                                          <th class="text-right">Ngày bắt đầu</th>
+                                          <th class="text-right">Ngày kết thúc</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="text-center">1</td>
+                                          <td class="text-left">HĐ0020</td>
+                                          <td class="text-left">HĐ LĐ 0020</td>
+                                          <td class="text-left">Hợp đồng không xác định thời hạn</td>
+                                          <td class="text-right">dd/mm/yyyy</td>
+                                          <td class="text-right">dd/mm/yyyy</td>
+                                        </tr>
+                                        <tr>
+                                          <td class="text-center">2</td>
+                                          <td class="text-left">HĐ0019</td>
+                                          <td class="text-left">HĐ LĐ 0019</td>
+                                          <td class="text-left">Hợp đồng 1 năm</td>
+                                          <td class="text-right">dd/mm/yyyy</td>
+                                          <td class="text-right">dd/mm/yyyy</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Trạng thái làm việc</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12">
+                                <div class="table-responsive">
+                                  <table id="" class="table table-bordered user-details">
+                                    <thead>
+                                      <tr>
+                                        <th class="text-center">STT</th>
+                                        <th class="text-right">Từ ngày</th>
+                                        <th class="text-right">Đến ngày</th>
+                                        <th class="text-left">Trạng thái làm việc</th>
+                                        <th class="text-center">Đóng bảo hiểm</th>
+                                        <th class="text-left">Ghi chú</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="text-center">1</td>
+                                        <td class="text-right">dd/mm/yyyy</td>
+                                        <td class="text-right">dd/mm/yyyy</td>
+                                        <td class="text-left">Đang làm việc</td>
+                                        <td class="text-center"><i class="fas fa-check text-available"></i></td>
+                                        <td class="text-right"></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <!---Công việc end--->
+                    <!---Sức khỏe start--->
+                    <div class="scrollable tab-pane" id="btabs-static-strong">
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Thông tin sức khỏe</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                              <div class="row mb-2">
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Chiều cao</label>
+                                    <div class="input-group">
+                                      <input type="email" class="form-control form-control-sm" id="" name="">
+                                      <span class="input-group-text">cm</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Cân nặng</label>
+                                    <div class="input-group">
+                                      <input type="email" class="form-control form-control-sm" id="" name="">
+                                      <span class="input-group-text">Kg</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Nhóm máu</label>
+                                    <select class="form-control form-control-sm" name="">
+                                      <option selected="">Chọn</option>
+                                      <option value="1">..</option>
+                                      <option value="2">..</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="">Tình trạng sức khỏe</label>
+                                    <select class="form-control form-control-sm" name="">
+                                      <option selected="">Chọn</option>
+                                      <option value="1">..</option>
+                                      <option value="2">..</option>
+                                    </select>
+                                </div>
+                              </div>
+                              <div class="row">
+                               <div class="col-lg-6 col-md-12">
+                                  <label class="form-label" for="">Ghi chú tình trạng sức khỏe</label>
+                                  <textarea class="form-control" cols="10" rows="2"></textarea>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">THÔNG TIN BẢO HIỂM</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                            <div class="row mb-2">
+                              <div class="col-lg-12 col-md-12"><h6>Bảo hiểm xã hội</h6></div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Số sổ BHXH</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="" value="">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Ngày cấp sổ BHXH</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value="">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Ngày tham gia BHXH</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value="">
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12"><h6>Bảo hiểm Y tế</h6></div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Số thẻ BHYT</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="" value="">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Ngày cấp thẻ BHYT</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value="">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Ngày tham gia BHYT</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value="">
+                              </div>
+                              <div class="col-lg-3 col-md-6">
+                                  <label class="form-label" for="">Nơi đăng ký khám chữa bệnh</label>
+                                  <input type="text" class="form-control form-control-sm" name="" placeholder="" value="">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="bottom-action">
+                            <button type="button" class="btn btn-light">Hủy bỏ</button>
+                            <button type="button" class="btn btn-primary"><i class="ti-save mr-05"></i>Lưu thông tin</button>
+                          </div>
+                      </div>
+                    </div>
+                    <!---Sức khỏe end--->
+                    <!---Lương start--->
+                    <div class="scrollable tab-pane" id="btabs-static-benefit">
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Thông tin tài khoản ngân hàng</h3>
+                            <div class="block-options">
+                              <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal-bank-account"><i class="ti-plus mr-05"></i>Thêm tài khoản</button>
+                            </div>
+                          </div>      
+                          <div class="block-content block-content-full">
+                              <div class="row mb-2">
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="example-ltf-email">Ngân hàng</label>
+                                    <div class="data-user">BIDV</div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="example-ltf-email">Số tài khoản</label>
+                                    <div class="data-user">0000000000000</div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="example-ltf-email">Chủ tài khoản</label>
+                                    <div class="data-user">Phan Minh Châu</div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="example-ltf-email">Loại tài khoản</label>
+                                    <div class="data-user">
+                                      <span class="d-inline-block rounded-pill bg-warning-light text-warning label-type">Thanh toán lương</span>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="row mb-0">
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="example-ltf-email">Ngân hàng</label>
+                                    <div class="data-user">BIDV</div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="example-ltf-email">Số tài khoản</label>
+                                    <div class="data-user">0000000000000</div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="example-ltf-email">Chủ tài khoản</label>
+                                    <div class="data-user">Phan Minh Châu</div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label class="form-label" for="example-ltf-email">Loại tài khoản</label>
+                                    <div class="data-user"></div>
+                                </div>
+                              </div>
+                              
+                          </div>
+                      </div>
+                      <div class="card mb-4">
+                        <div class="card-header mb-1">
+                          Lương thực nhận hàng năm
+                        </div>
+                        <div class="card-body">
+                          <div class="dataTable-top mb-2">
+                            <div class="dataTable-dropdown">
+                              <label>
+                                <select class="form-control-sm">
+                                  <option value="5">2022</option>
+                                  <option value="10" selected="">2021</option>
+                                  <option value="15">2020</option>
+                                </select> Xem theo năm</label>
+                              </div>
+                              <div class="dataTable-search"></div>
+                          </div>
+                          <canvas id="myBarChart" width="100%" height="30"></canvas>
+                          <div class="table-responsive mt-2">
+                            <table id="" class="table table-bordered user-details">
+                              <thead>
+                                <tr>
+                                  <th>Tháng 1</th>
+                                  <th>Tháng 2</th>
+                                  <th>Tháng 3</th>
+                                  <th>Tháng 4</th>
+                                  <th>Tháng 5</th>
+                                  <th>Tháng 6</th>
+                                  <th>Tháng 7</th>
+                                  <th>Tháng 8</th>
+                                  <th>Tháng 9</th>
+                                  <th>Tháng 10</th>
+                                  <th>Tháng 11</th>
+                                  <th>Tháng 12</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>000000</td>
+                                  <td>000000</td>
+                                  <td>000000</td>
+                                  <td>000000</td>
+                                  <td>000000</td>
+                                  <td>000000</td>
+                                  <td>000000</td>
+                                  <td>000000</td>
+                                  <td>000000</td>
+                                  <td>000000</td>
+                                  <td>000000</td>
+                                  <td>000000</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="scrollable-bottom"></div>
+                    </div>
+                    <!---Lương end--->
+                    <!---Khen thưởng start--->
+                    <div class="scrollable tab-pane" id="btabs-static-award">
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Khen thưởng</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                              <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                  <div class="table-responsive">
+                                    <table id="" class="table table-bordered user-details">
+                                      <thead>
+                                        <tr>
+                                          <th class="text-center">STT</th>
+                                          <th class="text-left">Số quyết định</th>
+                                          <th class="text-left">Ngày quyết định</th>
+                                          <th class="text-left">Tên đợt khen thưởng</th>
+                                          <th class="text-left">Hình thức</th>
+                                          <th class="text-left">Giá trị</th>
+                                          <th class="text-left">Lý do</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="text-center">1</td>
+                                          <td class="text-left">00000000000</td>
+                                          <td class="text-left">dd/mm/yyyy</td>
+                                          <td class="text-left">00000000000</td>
+                                          <td class="text-left">00000000000</td>
+                                          <td class="text-left">00000000000</td>
+                                          <td class="text-left">00000000000</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Kỷ luật</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                              <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                  <div class="table-responsive">
+                                    <table id="" class="table table-bordered user-details">
+                                      <thead>
+                                        <tr>
+                                          <th class="text-center">STT</th>
+                                          <th class="text-left">Số quyết định</th>
+                                          <th class="text-left">Ngày quyết định</th>
+                                          <th class="text-left">Hình thức</th>
+                                          <th class="text-left">Ngày vi phạm</th>
+                                          <th class="text-left">Ngày kết thúc</th>
+                                          <th class="text-left">Nội dung vi phạm</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="text-center">1</td>
+                                          <td class="text-left">00000000000</td>
+                                          <td class="text-left">dd/mm/yyyy</td>
+                                          <td class="text-left">00000000000</td>
+                                          <td class="text-left">00000000000</td>
+                                          <td class="text-left">00000000000</td>
+                                          <td class="text-left">00000000000</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <!---Khen thưởng end--->
+                    <!---Thống kê tai nạn start--->
+                    <div class="scrollable tab-pane" id="btabs-static-accident">
+                      <div class="block block-rounded">
+                        <div class="block-header block-header-default">
+                          <h3 class="block-title">Thông tin tai nạn</h3>
+                        </div>
+                        <div class="block-content block-content-full">
+                          <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                              <div class="table-responsive">
+                                <table id="" class="table table-bordered user-details">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-center">STT</th>
+                                      <th class="text-left">Số TK tai nạn</th>
+                                      <th class="text-left">Trạng thái</th>
+                                      <th class="text-left">Nơi xảy ra</th>
+                                      <th class="text-right">Ngày xảy ra</th>
+                                      <th class="text-left">Tình trạng vết thương</th>
+                                      <th class="text-left">Nguyên nhân</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-center">1</td>
+                                      <td class="text-left">00000000000</td>
+                                      <td class="text-left">00000000000</td>
+                                      <td class="text-left">00000000000</td>
+                                      <td class="text-right">dd/mm/yyyy</td>
+                                      <td class="text-left">00000000000</td>
+                                      <td class="text-left">00000000000</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!---Thống kê tai nạn end--->
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!---- Modal bằng cấp ----->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" id="modal-block-award">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="block block-rounded block-transparent mb-0">
+              <div class="block-header block-header-default">
+                <h3 class="block-title">Cập nhật bằng cấp, chứng chỉ</h3>
+                <div class="block-options">
+                  <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                    <i class="ti-close"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="block-content fs-sm">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="block block-rounded block-bordered relative-block bg-grey">
+                      <div class="block-custom">
+                        <div class="row mb-2">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Số bằng cấp/ chứng chỉ</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Tên bằng cấp/ chứng chỉ</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Nơi cấp</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="">
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Ngày cấp</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value="">
+                          </div>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Xếp loại</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="">
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Điểm số</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value="">
+                          </div>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Ngày hết hạn</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value="">
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">File đính kèm</label>
+                              <input class="form-control" type="file" id="">
+                          </div>
+                        </div>
+
+                        <div class="row mb-2">
+                          <div class="col-lg-12 col-md-12">
+                              <label class="form-label" for="">Ghi chú</label>
+                              <textarea class="form-control" cols="10" rows="2"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="block block-rounded block-bordered relative-block bg-grey">
+                      <div class="delete-block">
+                        <a class="btn btn-sm btn-alt-danger js-bs-tooltip-enabled btn-delete" href="javascript:void(0)" data-bs-toggle="tooltip" title="Xoá" data-bs-original-title="Xóa">
+                          <i class="ti-close text-danger"></i>
+                        </a>
+                      </div>
+                      <div class="block-custom">
+                        <div class="row mb-2">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Số bằng cấp/ chứng chỉ</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Tên bằng cấp/ chứng chỉ</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Nơi cấp</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="">
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Ngày cấp</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value="">
+                          </div>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Xếp loại</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="">
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Điểm số</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value="">
+                          </div>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Ngày hết hạn</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="dd/mm/yyyy" value="">
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">File đính kèm</label>
+                              <input class="form-control" type="file" id="">
+                          </div>
+                        </div>
+
+                        <div class="row mb-2">
+                          <div class="col-lg-12 col-md-12">
+                              <label class="form-label" for="">Ghi chú</label>
+                              <textarea class="form-control" cols="10" rows="2"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="btn-plus">
+                      <button type="button" class="btn btn-sm btn-outline-primary"><i class="ti-plus mr-05"></i>Thêm bằng cấp, chứng chỉ</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-action">
+                <button type="button" class="btn btn-alt-secondary me-1" data-dismiss="modal">Hủy bỏ</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="ti-save mr-05"></i>Lưu thông tin</button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <!---- Modal bằng cấp ----->
+    <!---- Modal kỹ năng ----->
+    <div class="modal" id="modal-block-skill" tabindex="-1" aria-labelledby="modal-block-normal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="block block-rounded block-transparent mb-0">
+              <div class="block-header block-header-default">
+                <h3 class="block-title">Cập nhật kỹ năng</h3>
+                <div class="block-options">
+                  <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                    <i class="ti-close"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="block-content fs-sm">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="block block-rounded block-bordered relative-block bg-grey">
+                      <div class="block-custom">
+                        <div class="row mb-1">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Tên kỹ năng</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Cấp độ đạt được</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                        </div>
+                        <div class="row mb-1">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">File đính kèm</label>
+                              <input class="form-control" type="file" id="">
+                          </div>
+                        </div>
+
+                        <div class="row mb-1">
+                          <div class="col-lg-12 col-md-12">
+                              <label class="form-label" for="">Ghi chú</label>
+                              <textarea class="form-control" cols="10" rows="2"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="block block-rounded block-bordered relative-block bg-grey">
+                      <div class="delete-block">
+                        <a class="btn btn-sm btn-alt-danger js-bs-tooltip-enabled btn-delete" href="javascript:void(0)" data-bs-toggle="tooltip" title="Xoá" data-bs-original-title="Xóa">
+                          <i class="ti-close text-danger"></i>
+                        </a>
+                      </div>
+                      <div class="block-custom">
+                        <div class="row mb-1">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Tên kỹ năng</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Cấp độ đạt được</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                        </div>
+                        <div class="row mb-1">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">File đính kèm</label>
+                              <input class="form-control" type="file" id="">
+                          </div>
+                        </div>
+
+                        <div class="row mb-1">
+                          <div class="col-lg-12 col-md-12">
+                              <label class="form-label" for="">Ghi chú</label>
+                              <textarea class="form-control" cols="10" rows="2"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="btn-plus">
+                      <button type="button" class="btn btn-sm btn-outline-primary"><i class="ti-plus mr-05"></i>Thêm kỹ năng</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-action">
+                <button type="button" class="btn btn-alt-secondary me-1" data-dismiss="modal">Hủy bỏ</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="ti-save mr-05"></i>Lưu thông tin</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---- Modal kỹ năng ----->
+      <!---- Modal bank account start ----->
+      <div class="modal" id="modal-bank-account" tabindex="-1">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="block block-rounded block-transparent mb-0">
+              <div class="block-header block-header-default">
+                <h3 class="block-title">Thêm tài khoản ngân hàng</h3>
+                <div class="block-options">
+                  <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                    <i class="ti-close"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="block-content fs-sm">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="block block-rounded block-bordered relative-block bg-grey">
+                      <div class="block-custom">
+                        <div class="row mb-1">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Tên Ngân Hàng</label>
+                              <select class="form-control form-control-sm" name="">
+                                <option selected="">Chọn</option>
+                                <option value="1">..</option>
+                                <option value="2">..</option>
+                              </select>
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Số tài khoản</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                        </div>
+                        <div class="row mb-1">
+                          <div class="col-lg-6 col-md-12">
+                            <label class="form-label" for="">Chủ tài khoản</label>
+                            <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                            <label class="form-label" for="">Loại tài khoản</label>
+                            <select class="form-control form-control-sm" name="">
+                                <option selected="">Chọn</option>
+                                <option value="1">Thanh toán lương</option>
+                                <option value="2">Tài khoản cá nhân</option>
+                              </select>
+                          </div>
+                        </div>
+
+                        <div class="row mb-1">
+                          <div class="col-lg-12 col-md-12">
+                              <label class="form-label" for="">Ghi chú</label>
+                              <textarea class="form-control" cols="10" rows="2"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="btn-plus">
+                      <button type="button" class="btn btn-sm btn-outline-primary"><i class="ti-plus mr-05"></i>Thêm tài khoản</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-action">
+                <button type="button" class="btn btn-alt-secondary me-1" data-dismiss="modal">Hủy bỏ</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="ti-save mr-05"></i>Lưu thông tin</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---- Modal bank account end ----->
+      <!---- Modal cover ----->
+      <div class="modal" id="modal-cover">
+        <div class="modal-dialog modal-lg modal-dialog-slideleft" role="document">
+          <div class="modal-content">
+            <div class="mb-0">
+              <div class="block-header block-header-default">
+                <h3 class="block-title">Cập nhật ảnh bìa</h3>
+                <div class="block-options">
+                  <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                    <i class="ti-close"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="block-content fs-sm">
+                <div class="row">
+                  <div class="col-md-12 col-lg-12">
+                    <div class="block-custom">
+                      <div class="row mb-2">
+                        <div class="col-lg-12 col-md-12">
+                          <h6>Chọn ảnh từ thư viện</h6>
+                        </div>
+                      </div>
+                      <div class="row mb-2">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="img-cover selected"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="img-cover"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="img-cover"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                      </div>
+                      <div class="row mb-2">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="img-cover"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="img-cover"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="img-cover"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                      </div>
+                      <div class="row mb-1">
+                        <div class="col-lg-12 col-md-12">
+                          <h6>Hoặc upload ảnh của bạn</h6>
+                          <div class="inner-cover">
+                            <input class="inputfile" type="file" name="pic" accept="image/*">
+                            <label><i class="ti-upload icon-change"></i> Chọn ảnh</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="bottom-cover">
+                <button type="button" class="btn btn-alt-secondary me-1" data-bs-dismiss="modal">Hủy bỏ</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="ti-save mr-05"></i>Lưu thông tin</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---- Modal cover ----->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script>
+      $("#sidebarToggle").click(function (e) {
+          $('#layoutSidenav').toggleClass('in');
+          e.stopPropagation()
+      });
+      </script>
+  </body>
+</html>

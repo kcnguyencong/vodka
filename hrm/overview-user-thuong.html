@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png"> -->
+
+    <title>Overview User Thường</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/calendar.css" rel="stylesheet">
+    <link href="css/hrm.css" rel="stylesheet">
+    <link href="css/themify-icons.css" rel="stylesheet" />
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="support-element">
+      <a class="text-center" href="javascript:void(0)" data-toggle="modal" data-target="#side-customer-birthday">
+        <div class="birthday-button"><i class="ti-gift bounce"></i></div>
+      </a>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    </div>
+    <div class="layout-hrm" id="layoutSidenav">
+      <div class="sidebar mt-1">
+        <nav class="sb-sidenav accordion sb-sidenav-itg">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-agenda"></i></div>
+                      <div class="sidemenu-item-title">Hồ sơ nhân sự</div>
+                      <div class="sidemenu-item-label">Hồ sơ</div>
+                  </a>
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-calendar"></i></div>
+                      <div class="sidemenu-item-title">Ngày công, phép</div>
+                      <div class="sidemenu-item-label">Công, phép</div>
+                  </a>
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-stats-up"></i></div>
+                      <div class="sidemenu-item-title">Thông tin doanh số</div>
+                      <div class="sidemenu-item-label">Doanh số</div>
+                  </a>
+
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-wallet"></i></div>
+                      <div class="sidemenu-item-title">Phiếu lương</div>
+                      <div class="sidemenu-item-label">Phiếu lương</div>
+                  </a>
+
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-timer"></i></div>
+                      <div class="sidemenu-item-title">Xin nghỉ phép</div>
+                      <div class="sidemenu-item-label">Nghỉ phép</div>
+                  </a>
+
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-bag"></i></div>
+                      <div class="sidemenu-item-title">Đi công tác</div>
+                      <div class="sidemenu-item-label">Công tác</div>
+                  </a>
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-pulse"></i></div>
+                      <div class="sidemenu-item-title">Đăng ký tăng ca</div>
+                      <div class="sidemenu-item-label">Tăng ca</div>
+                  </a>
+                  <!-- Sidebar Toggle-->
+                  <div class="btn-toogle" id="sidebarToggle" ><div class="btn-bg"><i class="ti-angle-left"></i></div></div>
+                </div>
+            </div>
+        </nav>
+      </div>
+      <div class="content" id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid">
+            <div class="row mb-1">
+                <div class="col-lg-12">
+                  <div class="hello-date mt-1 m-b-3">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-grey btn-viewtime current">Hôm nay</button>
+                      <button type="button" class="btn btn-grey btn-viewtime">Tháng này</button>
+                      <button type="button" class="btn btn-grey btn-viewtime">Năm nay</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row overview">
+              <div class="col-lg-12">
+                <div class="row items-push">
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                      <div class="block block-rounded mb-0 block-overview">
+                        <div class="block-content block-content-full">
+                          <dl class="overview-value mt-0 mb-1">
+                            <dt class="fs-28 fw-bold">12</dt>
+                            <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Số ngày phép còn lại">Số ngày phép còn lại</dd>
+                          </dl>
+                          <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 481.649 481.649" xml:space="preserve" class="icon-overview green">
+                              <path d="M481.341,240.48c-9.718-55.826-38.927-106.879-82.304-143.826c-41.146-35.045-92.862-55.383-146.723-57.927V19.95
+                                c0-6.351-5.148-11.5-11.5-11.5c-6.351,0-11.5,5.149-11.5,11.5v18.778c-53.86,2.543-105.576,22.88-146.722,57.926
+                                C39.029,133.758,9.756,185.09,0.166,241.194c-0.001,0.001-0.001,0.002-0.001,0.003h0c-0.19,1.117-0.213,2.228-0.084,3.302
+                                c0.633,5.352,4.953,9.627,10.447,10.094c3.066,0.264,5.971-0.71,8.207-2.519c0.923-0.746,1.737-1.639,2.401-2.657
+                                c0.56-0.858,1.011-1.8,1.33-2.808c6.677-19.97,25.288-33.378,46.357-33.378c21.121,0,39.77,13.469,46.403,33.517
+                                c1.558,4.708,5.958,7.887,10.918,7.887c4.959,0,9.36-3.179,10.917-7.887c6.635-20.048,25.283-33.517,46.404-33.517
+                                c20.564,0,38.78,12.773,45.851,31.951v175.893c0,15.788-12.822,29.125-28,29.125c-15.439,0-28-12.561-28-28
+                                c0-6.351-5.149-11.5-11.5-11.5c-6.351,0-11.5,5.149-11.5,11.5c0,28.122,22.878,51,51,51c13.64,0,26.503-5.561,36.218-15.658
+                                c9.532-9.908,14.782-22.858,14.782-36.467V245.016c7.111-19.087,25.284-31.785,45.79-31.785c21.121,0,39.771,13.47,46.404,33.518
+                                c1.559,4.708,5.959,7.887,10.918,7.887c4.959,0,9.359-3.179,10.918-7.887c6.635-20.048,25.282-33.518,46.403-33.518
+                                c21.12,0,39.769,13.47,46.403,33.518c1.516,4.579,5.728,7.725,10.548,7.88l0.06,0.002c0.131,0.004,0.276,0.007,0.39,0.006
+                                c6.352,0,11.5-5.149,11.5-11.5C481.649,242.222,481.543,241.333,481.341,240.48z M412.749,190.231
+                                c-23,0-44.007,10.863-57.321,28.473c-13.314-17.61-34.321-28.473-57.322-28.473c-23,0-44.006,10.862-57.32,28.473
+                                c-13.315-17.61-34.321-28.473-57.321-28.473c-23,0-44.006,10.862-57.321,28.473c-13.315-17.61-34.321-28.473-57.321-28.473
+                                c-11.572,0-22.639,2.75-32.477,7.726C69.786,116.625,149.426,61.45,240.815,61.45c91.402,0,171.052,55.191,204.484,136.544
+                                C435.443,192.994,424.35,190.231,412.749,190.231z"/>
+                              </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                      <div class="block block-rounded mb-0 block-overview">
+                        <div class="block-content block-content-full">
+                          <dl class="overview-value mt-0 mb-1">
+                            <dt class="fs-28 fw-bold">12</dt>
+                            <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Số ngày nghỉ phép">Số ngày nghỉ phép</dd>
+                          </dl>
+                          <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" class="icon-overview blue"><path d="M 14 3 C 13.48 3 12.940547 3.1805469 12.560547 3.5605469 C 12.180547 3.9405469 12 4.48 12 5 L 12 6 L 3 6 L 3 26 L 14.199219 26 C 14.069219 25.36 14 24.69 14 24 L 5 24 L 5 17.439453 C 5.59 17.779453 6.27 18 7 18 L 16.009766 18 C 16.569766 17.24 17.249766 16.56 18.009766 16 L 7 16 C 5.81 16 5 15.19 5 14 L 5 8 L 27 8 L 27 14 C 27 14.16 26.990938 14.309219 26.960938 14.449219 C 27.680937 14.669219 28.36 14.969844 29 15.339844 L 29 6 L 20 6 L 20 5 C 20 4.48 19.819453 3.9405469 19.439453 3.5605469 C 19.059453 3.1805469 18.52 3 18 3 L 14 3 z M 14 5 L 18 5 L 18 6 L 14 6 L 14 5 z M 9 12 L 9 15 L 11 15 L 11 12 L 9 12 z M 21 12 L 21 14.460938 C 21.32 14.360938 21.646719 14.275781 21.980469 14.207031 C 22.314219 14.138281 22.655 14.085781 23 14.050781 L 23 12 L 21 12 z M 24 16 C 19.59 16 16 19.59 16 24 C 16 28.41 19.59 32 24 32 C 28.41 32 32 28.41 32 24 C 32 19.59 28.41 16 24 16 z M 24 18 C 27.32 18 30 20.68 30 24 C 30 27.32 27.32 30 24 30 C 20.68 30 18 27.32 18 24 C 18 20.68 20.68 18 24 18 z M 23 19 L 23 25 L 28 25 L 28 23 L 25 23 L 25 19 L 23 19 z"/></svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                      <div class="block block-rounded mb-0 block-overview">
+                        <div class="block-content block-content-full">
+                          <dl class="overview-value mt-0 mb-1">
+                            <dt class="fs-28 fw-bold">12</dt>
+                            <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Số lần đi muộn">Số lần đi muộn</dd>
+                          </dl>
+                          <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                            <i class="ti-timer fs-28 text-danger"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6">
+                      <div class="block block-rounded mb-0 block-overview">
+                        <div class="block-content block-content-full">
+                          <dl class="overview-value mt-0 mb-1">
+                            <dt class="fs-28 fw-bold">12</dt>
+                            <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Số lần về sớm">Số lần về sớm</dd>
+                          </dl>
+                          <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                            <i class="ti-timer fs-28 icon-warning"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="row mt-2">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="block block-rounded">
+                        <div class="block-header block-header-default">
+                          <h3 class="block-title"><i class="ti-calendar text-muted mr-05"></i>Lịch làm việc</h3>
+                        </div>      
+                        <div class="block-content block-content-full">
+                          <div class="row mb-1">
+                            <div class="col-lg-12 col-md-12">
+                              <div id='calendar'></div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    
+  <!---- Modal Birthday start----->
+    <div class="modal" id="side-customer-birthday">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="mb-0">
+            <div class="block-header block-header-default">
+              <h3 class="block-title">Danh sách sinh nhật tháng</h3>
+              <div class="block-options">
+                <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                  <i class="ti-close"></i>
+                </button>
+              </div>
+            </div>
+            <div class="block-content">
+              <div class="row mb-1">
+                <div class="col-lg-12 col-md-12">
+                  <table class="table table-borderless table-striped table-vcenter">
+                    <tbody>
+                      <tr>
+                        <td class="text-left">
+                          Nguyễn Phong Hồng Duy
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">20/06</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">
+                          Nguyễn Tất Phong
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">22/06</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">
+                          Hoàng Minh Quang
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">25/06</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">
+                          Nguyễn Phong Hồng Duy
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">20/06</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">
+                          Nguyễn Tất Phong
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">22/06</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">
+                          Hoàng Minh Quang
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">25/06</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---- Modal Birthday end ----->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/calendar.js"></script>
+    <script>
+      $("#sidebarToggle").click(function (e) {
+          $('#layoutSidenav').toggleClass('in');
+          e.stopPropagation()
+      });
+      $(".btn-viewtime").on("click", function() {
+        $(".btn-viewtime").removeClass("current");
+        $(this).addClass("current");
+      });
+      </script>
+     <script>
+
+  $(document).ready(function() {
+      var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+    
+    /*  className colors
+    
+    className: default(transparent), important(red), chill(pink), success(green), info(blue)
+    
+    */    
+    
+      
+    /* initialize the external events
+    -----------------------------------------------------------------*/
+  
+    $('#external-events div.external-event').each(function() {
+    
+      // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+      // it doesn't need to have a start or end
+      var eventObject = {
+        title: $.trim($(this).text()) // use the element's text as the event title
+      };
+      
+      // store the Event Object in the DOM element so we can get to it later
+      $(this).data('eventObject', eventObject);
+      
+      // make the event draggable using jQuery UI
+      $(this).draggable({
+        zIndex: 999,
+        revert: true,      // will cause the event to go back to its
+        revertDuration: 0  //  original position after the drag
+      });
+      
+    });
+  
+  
+    /* initialize the calendar
+    -----------------------------------------------------------------*/
+    
+    var calendar =  $('#calendar').fullCalendar({
+      header: {
+        left: 'title',
+        center: 'agendaDay,agendaWeek,month',
+        right: 'prev,next today'
+      },
+      editable: true,
+      firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
+      selectable: true,
+      defaultView: 'month',
+      
+      axisFormat: 'h:mm',
+      columnFormat: {
+                month: 'ddd',    // Mon
+                week: 'ddd d', // Mon 7
+                day: 'dddd M/d',  // Monday 9/7
+                agendaDay: 'dddd d'
+            },
+            titleFormat: {
+                month: 'MMMM yyyy', // September 2009
+                week: "MMMM yyyy", // September 2009
+                day: 'MMMM yyyy'                  // Tuesday, Sep 8, 2009
+            },
+      allDaySlot: false,
+      selectHelper: true,
+      select: function(start, end, allDay) {
+        var title = prompt('Event Title:');
+        if (title) {
+          calendar.fullCalendar('renderEvent',
+            {
+              title: title,
+              start: start,
+              end: end,
+              allDay: allDay
+            },
+            true // make the event "stick"
+          );
+        }
+        calendar.fullCalendar('unselect');
+      },
+      droppable: true, // this allows things to be dropped onto the calendar !!!
+      drop: function(date, allDay) { // this function is called when something is dropped
+      
+        // retrieve the dropped element's stored Event Object
+        var originalEventObject = $(this).data('eventObject');
+        
+        // we need to copy it, so that multiple events don't have a reference to the same object
+        var copiedEventObject = $.extend({}, originalEventObject);
+        
+        // assign it the date that was reported
+        copiedEventObject.start = date;
+        copiedEventObject.allDay = allDay;
+        
+        // render the event on the calendar
+        // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+        $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+        
+        // is the "remove after drop" checkbox checked?
+        if ($('#drop-remove').is(':checked')) {
+          // if so, remove the element from the "Draggable Events" list
+          $(this).remove();
+        }
+        
+      },
+      
+      events: [
+        {
+          title: 'Ca Hành chính <br>9h00 - 16h00',
+          start: new Date(y, m, 1),
+          end: new Date(y, m, 1),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          title: 'Ca Hành chính <br>9h00 - 16h00',
+          start: new Date(y, m, 2),
+          end: new Date(y, m, 2),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          title: 'Ca Hành chính <br>9h00 - 16h00',
+          start: new Date(y, m, 3),
+          end: new Date(y, m, 3),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          title: 'Ca Hành chính <br>9h00 - 16h00',
+          start: new Date(y, m, 4),
+          end: new Date(y, m, 4),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          title: 'Ca Hành chính <br>9h00 - 16h00',
+          start: new Date(y, m, 5),
+          end: new Date(y, m, 5),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          title: 'Ca Hành chính <br>9h00 - 16h00',
+          start: new Date(y, m, 6),
+          end: new Date(y, m, 6),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          id: 999,
+          title: 'Ca Hành chính <br>9h00 - 16h00',
+          start: new Date(y, m, 20),
+          end: new Date(y, m, 20),
+          allDay: false,
+          className: 'info'
+        },
+        
+        {
+          title: 'Ca Sáng',
+          start: new Date(y, m, 25),
+          end: new Date(y, m, 25),
+          allDay: false,
+          className: 'important'
+        },
+        {
+          title: 'Ca Chiều',
+          start: new Date(y, m, 12),
+          end: new Date(y, m, 12),
+          allDay: false,
+          className: 'important'
+        },
+        {
+          title: 'Ca Chiều',
+          start: new Date(y, m, 15),
+          end: new Date(y, m, 15),
+          allDay: false,
+          className: 'important'
+        },
+        {
+          title: 'Công tác',
+          start: new Date(y, m, 28),
+          end: new Date(y, m, 28),
+          allDay: false,
+          url: 'https://ccp.cloudaccess.net/aff.php?aff=5188',
+          className: 'success'
+        }
+      ],      
+    });
+    
+    
+  });
+
+</script>
+  </body>
+</html>

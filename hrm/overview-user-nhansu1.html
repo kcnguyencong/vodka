@@ -1,0 +1,581 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png"> -->
+
+    <title>Overview nhân sự 1</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/calendar.css" rel="stylesheet">
+    <link href="css/hrm.css" rel="stylesheet">
+    <link href="css/themify-icons.css" rel="stylesheet" />
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    </div>
+    <div class="layout-hrm" id="layoutSidenav">
+      <div class="sidebar mt-1">
+        <nav class="sb-sidenav accordion sb-sidenav-itg">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-agenda"></i></div>
+                      <div class="sidemenu-item-title">Hồ sơ nhân sự</div>
+                      <div class="sidemenu-item-label">Hồ sơ</div>
+                  </a>
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-calendar"></i></div>
+                      <div class="sidemenu-item-title">Ngày công, phép</div>
+                      <div class="sidemenu-item-label">Công, phép</div>
+                  </a>
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-stats-up"></i></div>
+                      <div class="sidemenu-item-title">Thông tin doanh số</div>
+                      <div class="sidemenu-item-label">Doanh số</div>
+                  </a>
+
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-wallet"></i></div>
+                      <div class="sidemenu-item-title">Phiếu lương</div>
+                      <div class="sidemenu-item-label">Phiếu lương</div>
+                  </a>
+
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-timer"></i></div>
+                      <div class="sidemenu-item-title">Xin nghỉ phép</div>
+                      <div class="sidemenu-item-label">Nghỉ phép</div>
+                  </a>
+
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-bag"></i></div>
+                      <div class="sidemenu-item-title">Đi công tác</div>
+                      <div class="sidemenu-item-label">Công tác</div>
+                  </a>
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-pulse"></i></div>
+                      <div class="sidemenu-item-title">Đăng ký tăng ca</div>
+                      <div class="sidemenu-item-label">Tăng ca</div>
+                  </a>
+                  <!-- Sidebar Toggle-->
+                  <div class="btn-toogle" id="sidebarToggle" ><div class="btn-bg"><i class="ti-angle-left"></i></div></div>
+                </div>
+            </div>
+        </nav>
+      </div>
+      <div class="content" id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid">
+            <div class="row mb-1">
+                <div class="col-lg-12">
+                  <div class="hello-date mt-1 m-b-3">
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-grey btn-viewtime current">Hôm nay</button>
+                        <button type="button" class="btn btn-grey btn-viewtime">Tháng này</button>
+                        <button type="button" class="btn btn-grey btn-viewtime">Năm nay</button>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row overview mb-2">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="block block-rounded">
+                  <div class="block-header block-header-default">
+                    <h3 class="block-title">Nhân sự theo phòng ban</h3>
+                  </div>
+                  <div class="block-content block-content-full">
+                    <canvas id="mem-department"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="block block-rounded">
+                  <div class="block-header block-header-default">
+                    <h3 class="block-title">Nhân sự theo giới tính</h3>
+                  </div>
+                  <div class="block-content block-content-full">
+                    <canvas id="mem-gender"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="block block-rounded">
+                  <div class="block-header block-header-default">
+                    <h3 class="block-title">Nhân sự theo vị trí</h3>
+                  </div>
+                  <div class="block-content block-content-full">
+                    <canvas id="mem-position"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="block block-rounded">
+                  <div class="block-header block-header-default">
+                    <h3 class="block-title">Nghỉ phép theo lý do</h3>
+                  </div>
+                  <div class="block-content block-content-full">
+                    <canvas id="mem-holiday"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="block block-rounded">
+                  <div class="block-header block-header-default">
+                    <h3 class="block-title">Tổng số giờ làm việc theo bộ phận</h3>
+                  </div>
+                  <div class="block-content block-content-full">
+                    <canvas id="working-time"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="block block-rounded">
+                  <div class="block-header block-header-default">
+                    <h3 class="block-title">Nhân sự theo tỉnh thành theo năm</h3>
+                  </div>
+                  <div class="block-content block-content-full">
+                    <canvas id="mem-location"></canvas>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row overview mb-2">
+              <div class="col-lg-12 col-md-12">
+                <div class="block block-rounded">
+                  <div class="block-header block-header-default">
+                    <h3 class="block-title"><i class="ti-calendar text-muted mr-05"></i>Lịch làm việc</h3>
+                  </div>      
+                  <div class="block-content block-content-full">
+                    <div class="row mb-1">
+                      <div class="col-lg-12 col-md-12">
+                        <div id='calendar'></div>
+                      </div>
+                    </div>
+
+                  </div>
+              </div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="js/Chart.PieceLabel.js"></script>
+    <script>
+      $("#sidebarToggle").click(function (e) {
+          $('#layoutSidenav').toggleClass('in');
+          e.stopPropagation()
+      });
+      $(".btn-viewtime").on("click", function() {
+        $(".btn-viewtime").removeClass("current");
+        $(this).addClass("current");
+      });
+      </script>
+     <script>
+        //Department start
+        new Chart(document.getElementById("mem-department"), {
+            type: 'bar',
+            data: {
+              labels: ['Kế toán', 'R & D', 'Support', 'Dự án', 'Marketing', 'Kinh doanh'],
+              datasets: [
+                {
+                  backgroundColor: 'rgba(77,150,255, 1)',
+                  data: [8, 15, 20, 30, 16, 35]
+                }
+              ]
+            },
+            options: {
+              plugins: {
+                labels : {
+                    display: false,
+                   render: 'value',
+                   precision: 0,
+                   fontSize: 10,
+                   showActualPercentages: true,
+                }
+              },
+              legend: {
+                display: false,
+                labels: {
+                    usePointStyle: true,
+                    fontSize: 10
+                },
+                position:'bottom'
+                },
+            }
+        });
+        //Department end
+        //holiday start
+        new Chart(document.getElementById("mem-holiday"), {
+            type: 'bar',
+            data: {
+              labels: ['Nghỉ phép', 'Nghỉ bù', 'Nghỉ ốm', 'Nghỉ Hiếu', 'Nghỉ kết hôn'],
+              datasets: [
+                {
+                  backgroundColor: '#7fc06e',
+                  data: [8, 15, 20, 30, 16]
+                }
+              ]
+            },
+            options: {
+              legend: {
+                    display: false,
+                    labels: {
+                        usePointStyle: true,
+                        fontSize: 10
+                    },
+                    position:'bottom'
+                },
+              title: {
+                display: false,
+                text: ''
+              }
+            }
+        });
+        //holiday end
+       //Gender
+         new Chart(document.getElementById("mem-gender"), {
+              type: 'pie',
+              data: {
+                labels: ["Nam", "Nữ"],
+                datasets: [{
+                  backgroundColor: ["#4d96ff", "#FF6384"],
+                  data: [35,15],
+                }]
+              },
+              options: {
+                title: {
+                  display: false,
+                  text: ''
+                },
+                
+                legend: {
+                    display: true,
+                    labels: {
+                        usePointStyle: true,
+                        fontSize: 10,
+                    },
+                    position:'bottom'
+                },
+              }
+          });
+          //Gender end--->
+          //Location
+         new Chart(document.getElementById("mem-location"), {
+              type: 'pie',
+              data: {
+                labels: ["Hà Nội", "Hồ Chính Minh", "Đà Nẵng", "Thanh Hoá", "Nam Định"],
+                datasets: [{
+                  backgroundColor: ["#7fc06e", "#61c0c3", "#f4679b", "#fcca73", "#fc676f"],
+                  data: [35,15, 34, 29, 44]
+                }]
+              },
+              options: {
+                title: {
+                  display: false,
+                  text: ''
+                },
+                legend: {
+                    display: true,
+                    labels: {
+                        usePointStyle: true,
+                        fontSize: 10
+                    },
+                    position:'bottom'
+                },
+              }
+          });
+          //Location end--->
+          //Position
+         new Chart(document.getElementById("mem-position"), {
+              type: 'pie',
+              data: {
+                labels: ["Admin Maintenance", "CEO", "Design Engineer", "Design manager", "Finance ConIR", "Manager", "Regional SALES Manage", "Sales Executive", "Sales Manager", "Sale Officer", "Support Engineer", "Technical Consultant"],
+                datasets: [{
+                  backgroundColor: ["#fc676f","#fc676f", "#7fc06e", "#5babf2", "#fcca73", "#f4679b", "#5984da", "#61c0c3", "#bfbfbf", "#7fc06e", "#cfaa99","#737373"], 
+                  data: [25,2,5,12,10,9,8,7,6,5,4,3]
+                }]
+              },
+              options: {
+                pieceLabel: {
+                    render: 'label',
+                    fontColor: '#000',
+                    position: 'outside',
+                    fontSize: 10,
+                    segment: true
+                  },
+                title: {
+                  display: false,
+                  text: ''
+                },
+                legend: {
+                    display: true,
+                    labels: {
+                        usePointStyle: true,
+                        fontSize: 10
+                    },
+                    position:'right'
+                },
+              }
+          });
+          //Position end--->
+        //Working time
+        new Chart(document.getElementById("working-time"), {
+            type: 'bar',
+            data: {
+              labels: ["Kế toán", "R & D", "Support", "Dự án", "Marketing", "Kinh doanh"],
+              datasets: [{
+                  label: "Giờ làm trung bình",
+                  type: "line",
+                  borderColor: "#5babf2",
+                  data: [133,221,783,2478,783,2478],
+                  fill: false
+                }, {
+                  label: "Phòng ban",
+                  type: "bar",
+                  backgroundColor: "#fcca73",
+                  data: [408,547,675,734,834,934],
+                }
+              ]
+            },
+            options: {
+              title: {
+                display: true,
+                text: ''
+              },
+              legend: {
+                    display: true,
+                    labels: {
+                        usePointStyle: true,
+                        fontSize: 10
+                    },
+                    position:'bottom'
+                }
+            }
+        });
+      </script>
+      <script>
+
+  $(document).ready(function() {
+      var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+    
+    /*  className colors
+    
+    className: default(transparent), important(red), chill(pink), success(green), info(blue)
+    
+    */    
+    
+      
+    /* initialize the external events
+    -----------------------------------------------------------------*/
+  
+    $('#external-events div.external-event').each(function() {
+    
+      // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+      // it doesn't need to have a start or end
+      var eventObject = {
+        title: $.trim($(this).text()) // use the element's text as the event title
+      };
+      
+      // store the Event Object in the DOM element so we can get to it later
+      $(this).data('eventObject', eventObject);
+      
+      // make the event draggable using jQuery UI
+      $(this).draggable({
+        zIndex: 999,
+        revert: true,      // will cause the event to go back to its
+        revertDuration: 0  //  original position after the drag
+      });
+      
+    });
+  
+  
+    /* initialize the calendar
+    -----------------------------------------------------------------*/
+    
+    var calendar =  $('#calendar').fullCalendar({
+      header: {
+        left: 'title',
+        center: 'agendaDay,agendaWeek,month',
+        right: 'prev,next today'
+      },
+      editable: true,
+      firstDay: 1, //  1(Monday) this can be changed to 0(Sunday) for the USA system
+      selectable: true,
+      defaultView: 'month',
+      
+      axisFormat: 'h:mm',
+      columnFormat: {
+                month: 'ddd',    // Mon
+                week: 'ddd d', // Mon 7
+                day: 'dddd M/d',  // Monday 9/7
+                agendaDay: 'dddd d'
+            },
+            titleFormat: {
+                month: 'MMMM yyyy', // September 2009
+                week: "MMMM yyyy", // September 2009
+                day: 'MMMM yyyy'                  // Tuesday, Sep 8, 2009
+            },
+      allDaySlot: false,
+      selectHelper: true,
+      select: function(start, end, allDay) {
+        var title = prompt('Event Title:');
+        if (title) {
+          calendar.fullCalendar('renderEvent',
+            {
+              title: title,
+              start: start,
+              end: end,
+              allDay: allDay
+            },
+            true // make the event "stick"
+          );
+        }
+        calendar.fullCalendar('unselect');
+      },
+      droppable: true, // this allows things to be dropped onto the calendar !!!
+      drop: function(date, allDay) { // this function is called when something is dropped
+      
+        // retrieve the dropped element's stored Event Object
+        var originalEventObject = $(this).data('eventObject');
+        
+        // we need to copy it, so that multiple events don't have a reference to the same object
+        var copiedEventObject = $.extend({}, originalEventObject);
+        
+        // assign it the date that was reported
+        copiedEventObject.start = date;
+        copiedEventObject.allDay = allDay;
+        
+        // render the event on the calendar
+        // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+        $('#calendar').fullCalendar('renderEvent', copiedEventObject, true);
+        
+        // is the "remove after drop" checkbox checked?
+        if ($('#drop-remove').is(':checked')) {
+          // if so, remove the element from the "Draggable Events" list
+          $(this).remove();
+        }
+        
+      },
+      
+      events: [
+        {
+          title: 'Hành chính',
+          start: new Date(y, m, 1),
+          end: new Date(y, m, 1),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          title: 'Hành chính',
+          start: new Date(y, m, 2),
+          end: new Date(y, m, 2),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          title: 'Hành chính',
+          start: new Date(y, m, 3),
+          end: new Date(y, m, 3),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          title: 'Hành chính',
+          start: new Date(y, m, 4),
+          end: new Date(y, m, 4),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          title: 'Hành chính',
+          start: new Date(y, m, 5),
+          end: new Date(y, m, 5),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          title: 'Hành chính',
+          start: new Date(y, m, 6),
+          end: new Date(y, m, 6),
+          allDay: false,
+          className: 'info'
+        },
+        {
+          id: 999,
+          title: 'Hành chính',
+          start: new Date(y, m, 20),
+          end: new Date(y, m, 20),
+          allDay: false,
+          className: 'info'
+        },
+        
+        {
+          title: 'Ca Sáng',
+          start: new Date(y, m, 25),
+          end: new Date(y, m, 25),
+          allDay: false,
+          className: 'important'
+        },
+        {
+          title: 'Ca Chiều',
+          start: new Date(y, m, 12),
+          end: new Date(y, m, 12),
+          allDay: false,
+          className: 'important'
+        },
+        {
+          title: 'Ca Chiều',
+          start: new Date(y, m, 15),
+          end: new Date(y, m, 15),
+          allDay: false,
+          className: 'important'
+        },
+        {
+          title: 'Công tác',
+          start: new Date(y, m, 28),
+          end: new Date(y, m, 28),
+          allDay: false,
+          url: 'https://ccp.cloudaccess.net/aff.php?aff=5188',
+          className: 'success'
+        }
+      ],      
+    });
+    
+    
+  });
+
+</script>
+  </body>
+</html>

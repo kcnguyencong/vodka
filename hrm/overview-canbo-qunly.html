@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png"> -->
+
+    <title>Overview cán bộ quản lý</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/hrm.css" rel="stylesheet">
+    <link href="css/themify-icons.css" rel="stylesheet" />
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="support-element">
+      <a class="text-center" href="javascript:void(0)" data-toggle="modal" data-target="#side-customer-birthday">
+        <div class="birthday-button"><i class="ti-gift bounce"></i></div>
+      </a>
+    </div>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    </div>
+    <div class="layout-hrm" id="layoutSidenav">
+      <div class="sidebar mt-1">
+        <nav class="sb-sidenav accordion sb-sidenav-itg">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-agenda"></i></div>
+                      <div class="sidemenu-item-title">Hồ sơ nhân sự</div>
+                      <div class="sidemenu-item-label">Hồ sơ</div>
+                  </a>
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-calendar"></i></div>
+                      <div class="sidemenu-item-title">Ngày công, phép</div>
+                      <div class="sidemenu-item-label">Công, phép</div>
+                  </a>
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-stats-up"></i></div>
+                      <div class="sidemenu-item-title">Thông tin doanh số</div>
+                      <div class="sidemenu-item-label">Doanh số</div>
+                  </a>
+
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-wallet"></i></div>
+                      <div class="sidemenu-item-title">Phiếu lương</div>
+                      <div class="sidemenu-item-label">Phiếu lương</div>
+                  </a>
+
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-timer"></i></div>
+                      <div class="sidemenu-item-title">Xin nghỉ phép</div>
+                      <div class="sidemenu-item-label">Nghỉ phép</div>
+                  </a>
+
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-bag"></i></div>
+                      <div class="sidemenu-item-title">Đi công tác</div>
+                      <div class="sidemenu-item-label">Công tác</div>
+                  </a>
+                  <a class="nav-link" href="#">
+                      <div class="sb-nav-link-icon"><i class="ti-pulse"></i></div>
+                      <div class="sidemenu-item-title">Đăng ký tăng ca</div>
+                      <div class="sidemenu-item-label">Tăng ca</div>
+                  </a>
+                  <!-- Sidebar Toggle-->
+                  <div class="btn-toogle" id="sidebarToggle" ><div class="btn-bg"><i class="ti-angle-left"></i></div></div>
+                </div>
+            </div>
+        </nav>
+      </div>
+      <div class="content" id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid">
+            <div class="row mb-1">
+                <div class="col-lg-12">
+                  <div class="hello-date mt-1 m-b-3">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-grey btn-viewtime current">Hôm nay</button>
+                      <button type="button" class="btn btn-grey btn-viewtime">Tháng này</button>
+                      <button type="button" class="btn btn-grey btn-viewtime">Năm nay</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="row overview">
+              <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="row items-push mb-1">
+                      <div class="col-lg-3 col-md-3">
+                       <div class="block block-rounded block-overview">
+                          <div class="block-content block-content-full bg-members">
+                            <dl class="overview-value mt-0 mb-1">
+                              <div class="member-total"><span class="fs-28 fw-bold">50</span><span class="number-gender">Nhân viên</div>
+                            </dl>
+                            <div class="block-overview__icon">
+                              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-overview icon-members">
+                                <path d="M18 19V18C18 15.7909 16.2091 14 14 14H10C7.79086 14 6 15.7909 6 18V19M23 19V18C23 15.7909 21.2091 14 19 14H18.5M1 19V18C1 15.7909 2.79086 14 5 14H5.5M17 11C18.6569 11 20 9.65685 20 8C20 6.34315 18.6569 5 17 5M7 11C5.34315 11 4 9.65685 4 8C4 6.34315 5.34315 5 7 5M15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8Z" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </div>
+                            <div class="bg-members__bottom rounded-bottom">
+                              <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                  <div class="text-white"><span class="fw-bold">35</span> Nam</div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                  <div class="text-white"><span class="fw-bold">15</span> Nữ</div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                  <div class="text-white"><span class="fw-bold">1</span> Khác</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3">
+                        <div class="block block-rounded mb-0 block-overview">
+                          <div class="block-content block-content-full">
+                            <dl class="overview-value mt-0 mb-1">
+                              <dt class="fs-28 fw-bold">12</dt>
+                              <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Nhân viên chính thức">Nhân viên chính thức</dd>
+                            </dl>
+                            <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                              <svg viewBox="0 0 270.92 270.92" version="1.1" xmlns="http://www.w3.org/2000/svg" class="icon-overview green"><g id="Layer_x0020_1"><path class="fil0" d="M90.16 72.11l0 -20.33c0,-6.44 5.23,-11.68 11.68,-11.68l67.25 0c6.44,0 11.68,5.24 11.68,11.68l0 20.33 -90.61 0zm127.56 0l-21.08 0 0 -20.33c0,-15.19 -12.36,-27.55 -27.55,-27.55l-67.25 0c-15.19,0 -27.55,12.36 -27.55,27.55l0 20.33 -29.5 0c-6.96,0 -13.27,3.83 -16.48,9.99 -3.21,6.17 -2.73,13.54 1.26,19.23l27.83 39.79c3.47,4.97 9.16,7.94 15.23,7.94l124.35 0c7.27,0 13.91,-4.28 16.93,-10.91l14.59 -32.19c1.8,-3.99 0.04,-8.7 -3.95,-10.51 -4.01,-1.81 -8.7,-0.04 -10.51,3.95l-14.59 32.19c-0.44,0.97 -1.41,1.59 -2.47,1.59l-124.35 0c-0.88,0 -1.72,-0.42 -2.22,-1.15l-27.84 -39.8c-0.82,-1.17 -0.47,-2.25 -0.19,-2.79 0.29,-0.55 0.99,-1.46 2.41,-1.46l172.93 0c11.73,0 20.91,8.85 20.91,20.17l0 102.5c0,11.12 -9.06,20.18 -20.17,20.18l-165.99 0c-11.12,0 -20.17,-9.06 -20.17,-20.18l0 -82.99c0,-4.39 -3.55,-7.94 -7.94,-7.94 -4.39,0 -7.93,3.55 -7.93,7.94l0 82.99c0,19.88 16.16,36.05 36.04,36.05l165.99 0c19.87,0 36.04,-16.17 36.04,-36.05l0 -102.5c0,-20.21 -16.16,-36.04 -36.78,-36.04z"/></g></svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3">
+                        <div class="block block-rounded mb-0 block-overview">
+                          <div class="block-content block-content-full">
+                            <dl class="overview-value mt-0 mb-1">
+                              <dt class="fs-28 fw-bold">12</dt>
+                              <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Nhân viên thử việc">Nhân viên thử việc</dd>
+                            </dl>
+                            <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                              <svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" class="icon-overview"><g fill="none" fill-rule="evenodd" stroke="#686868" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><circle cx="7.5" cy="5.5" r="2"/><path d="m.5 3.5h1v-1c0-1.1045695.8954305-2 2-2h8c1.1045695 0 2 .8954305 2 2v10c0 1.1045695-.8954305 2-2 2h-8c-1.1045695 0-2-.8954305-2-2v-1h-1"/><path d="m.5 7.5h1"/><path d="m.5 5.5h1"/><path d="m.5 9.5h1"/><path d="m10.5 10.5v-1c0-1.1045695-.8954305-2-2-2h-2c-1.1045695 0-2 .8954305-2 2v1c0 .5522847.44771525 1 1 1h4c.5522847 0 1-.4477153 1-1z"/></g></svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3">
+                        <div class="block block-rounded mb-0 block-overview">
+                          <div class="block-content block-content-full">
+                            <dl class="overview-value mt-0 mb-1">
+                              <dt class="fs-28 fw-bold">12</dt>
+                              <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Nhân viên nghỉ việc">Nhân viên nghỉ việc</dd>
+                            </dl>
+                            <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" xml:space="preserve" class="icon-overview red">
+                                <g>
+                                  <path d="M54.164,35.163C54.709,32.978,55,30.742,55,28.5C55,13.337,42.664,1,27.5,1S0,13.337,0,28.5 c0,8.01,3.444,15.229,8.927,20.259l-0.026,0.023l0.891,0.751c0.056,0.047,0.117,0.086,0.173,0.133 c0.477,0.396,0.972,0.772,1.476,1.136c0.159,0.115,0.318,0.23,0.479,0.341c0.535,0.369,1.085,0.719,1.646,1.051 c0.122,0.071,0.244,0.141,0.366,0.211c0.613,0.349,1.239,0.678,1.881,0.981c0.047,0.022,0.094,0.042,0.141,0.064 c2.089,0.971,4.319,1.684,6.65,2.105c0.062,0.011,0.123,0.022,0.185,0.033c0.723,0.125,1.455,0.225,2.197,0.292 c0.09,0.008,0.181,0.013,0.271,0.021C25.998,55.961,26.744,56,27.5,56c3.262,0,6.454-0.577,9.503-1.702 C39.389,57.168,42.984,59,47,59c7.168,0,13-5.832,13-13C60,41.478,57.677,37.492,54.164,35.163z M2,28.5C2,14.439,13.439,3,27.5,3 S53,14.439,53,28.5c0,1.903-0.214,3.804-0.639,5.666c-0.017-0.008-0.036-0.013-0.053-0.021c-0.376-0.169-0.762-0.32-1.156-0.453 c-0.034-0.011-0.067-0.026-0.101-0.037c-0.411-0.135-0.83-0.251-1.258-0.345c-0.02-0.005-0.04-0.011-0.06-0.016 c-0.417-0.09-0.841-0.158-1.271-0.207c-0.03-0.004-0.06-0.01-0.09-0.014C47.921,33.027,47.464,33,47,33
+                                    c-5.923,0-10.923,3.986-12.485,9.413C34.077,42,33.818,41.425,33.818,40.8v-2.957c0.198-0.243,0.405-0.518,0.617-0.817
+                                    c1.096-1.547,1.975-3.269,2.616-5.123c1.266-0.602,2.085-1.864,2.085-3.289v-3.545c0-0.866-0.318-1.708-0.886-2.369v-4.667
+                                    c0.052-0.52,0.236-3.448-1.883-5.864C34.524,10.065,31.541,9,27.5,9s-7.024,1.065-8.867,3.168
+                                    c-2.119,2.416-1.935,5.346-1.883,5.864v4.667c-0.568,0.661-0.886,1.503-0.886,2.369v3.545c0,1.101,0.494,2.128,1.339,2.821
+                                    c0.81,3.173,2.476,5.575,3.092,6.389v2.894c0,0.816-0.445,1.566-1.162,1.958l-7.907,4.313c-0.253,0.138-0.502,0.298-0.752,0.477
+                                    C5.276,42.792,2,36.022,2,28.5z M25.605,53.922c-0.109-0.008-0.218-0.015-0.326-0.025c-0.634-0.056-1.266-0.131-1.893-0.234
+                                    c-0.026-0.004-0.052-0.01-0.077-0.014c-1.327-0.222-2.632-0.548-3.903-0.974c-0.034-0.011-0.068-0.023-0.102-0.035
+                                    c-1.237-0.42-2.44-0.939-3.601-1.544c-0.067-0.035-0.135-0.068-0.201-0.103c-0.515-0.275-1.019-0.573-1.515-0.883
+                                    c-0.143-0.09-0.284-0.181-0.425-0.273c-0.456-0.298-0.905-0.608-1.343-0.936c-0.045-0.034-0.088-0.07-0.133-0.104
+                                    c0.032-0.018,0.064-0.036,0.097-0.054l7.907-4.313c1.359-0.742,2.204-2.165,2.204-3.714v-3.603l-0.233-0.278
+                                    c-0.021-0.025-2.176-2.634-2.999-6.215l-0.091-0.396l-0.341-0.221c-0.481-0.311-0.769-0.831-0.769-1.392v-3.545
+                                    c0-0.465,0.198-0.898,0.557-1.223l0.33-0.298v-5.57l-0.009-0.131c-0.003-0.024-0.298-2.429,1.396-4.36
+                                    C21.583,11.837,24.06,11,27.5,11c3.425,0,5.897,0.83,7.346,2.466c1.692,1.911,1.415,4.361,1.413,4.381l-0.009,5.701l0.33,0.298
+                                    c0.359,0.324,0.557,0.758,0.557,1.223v3.545c0,0.724-0.475,1.356-1.181,1.574l-0.498,0.154l-0.16,0.496
+                                    c-0.589,1.833-1.429,3.525-2.496,5.032c-0.259,0.367-0.514,0.695-0.736,0.948l-0.248,0.283V40.8c0,1.587,0.868,3.015,2.268,3.746
+                                    C34.033,45.024,34,45.508,34,46c0,0.292,0.01,0.583,0.029,0.873c0.007,0.103,0.021,0.205,0.031,0.307
+                                    c0.009,0.096,0.018,0.191,0.029,0.287c0.01,0.09,0.015,0.181,0.027,0.27c0.023,0.17,0.056,0.338,0.086,0.507
+                                    c0.02,0.115,0.035,0.231,0.058,0.345c0,0,0.002,0.008,0.003,0.012c0.006,0.03,0.015,0.058,0.021,0.088
+                                    c0.031,0.146,0.068,0.291,0.104,0.436c0.025,0.101,0.045,0.202,0.072,0.302c0.024,0.088,0.055,0.173,0.081,0.26
+                                    c0.034,0.116,0.07,0.231,0.108,0.345c0.024,0.072,0.042,0.145,0.067,0.216c0.07,0.201,0.15,0.399,0.23,0.596
+                                    c0.001,0.003,0.002,0.005,0.003,0.008c0.061,0.15,0.125,0.297,0.191,0.444c0.049,0.109,0.1,0.218,0.152,0.326
+                                    c0.034,0.071,0.064,0.143,0.099,0.213c0.023,0.046,0.05,0.09,0.074,0.136c0.084,0.163,0.173,0.322,0.264,0.48
+                                    c0.027,0.047,0.051,0.096,0.078,0.143C33.119,53.527,30.33,54,27.5,54C26.866,54,26.234,53.969,25.605,53.922z M47,57
+                                    c-3.661,0-6.901-1.805-8.902-4.564c-0.083-0.114-0.158-0.231-0.236-0.347c-0.054-0.08-0.111-0.158-0.162-0.239
+                                    c-0.043-0.069-0.085-0.138-0.127-0.208c-0.045-0.074-0.085-0.15-0.128-0.225c-0.069-0.122-0.143-0.241-0.207-0.365
+                                    c-0.047-0.091-0.089-0.185-0.134-0.278c-0.012-0.025-0.023-0.051-0.035-0.076c-0.075-0.157-0.153-0.312-0.221-0.472
+                                    c-0.036-0.085-0.063-0.173-0.097-0.258c-0.077-0.199-0.155-0.398-0.221-0.602c-0.031-0.095-0.055-0.193-0.083-0.289
+                                    c-0.009-0.03-0.017-0.059-0.025-0.088c-0.056-0.199-0.11-0.399-0.155-0.603c-0.014-0.063-0.025-0.127-0.038-0.191
+                                    c-0.012-0.06-0.025-0.121-0.036-0.181c-0.041-0.222-0.075-0.446-0.103-0.672c-0.003-0.026-0.006-0.052-0.009-0.079
+                                    c-0.009-0.082-0.022-0.164-0.029-0.246C36.021,46.681,36,46.343,36,46c0-0.315,0.021-0.626,0.047-0.934
+                                    c0.028-0.295,0.067-0.599,0.122-0.919l0.074-0.433C37.298,38.742,41.719,35,47,35c0.446,0,0.89,0.034,1.332,0.089
+                                    c0.101,0.012,0.199,0.031,0.299,0.046c0.365,0.055,0.728,0.127,1.086,0.219c0.075,0.019,0.15,0.037,0.225,0.058
+                                    c0.882,0.247,1.735,0.601,2.537,1.063C55.773,38.377,58,41.93,58,46C58,52.065,53.065,57,47,57z"/>
+                                  <path d="M51.95,41.051c-0.391-0.391-1.023-0.391-1.414,0L47,44.586l-3.536-3.535c-0.391-0.391-1.023-0.391-1.414,0 s-0.391,1.023,0,1.414L45.586,46l-3.536,3.535c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293 s0.512-0.098,0.707-0.293L47,47.414l3.536,3.535c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293 c0.391-0.391,0.391-1.023,0-1.414L48.414,46l3.536-3.535C52.34,42.074,52.34,41.441,51.95,41.051z"/>
+                                </g>
+                                </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row items-push mb-1">
+                      <div class="col-lg-3 col-md-3">
+                        <div class="block block-rounded mb-0 block-overview">
+                          <div class="block-content block-content-full">
+                            <dl class="overview-value mt-0 mb-1">
+                              <dt class="fs-28 fw-bold">12</dt>
+                              <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Số nhân viên nghỉ phép">Số nhân viên nghỉ phép</dd>
+                            </dl>
+                            <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 481.649 481.649" xml:space="preserve" class="icon-overview green">
+                              <path d="M481.341,240.48c-9.718-55.826-38.927-106.879-82.304-143.826c-41.146-35.045-92.862-55.383-146.723-57.927V19.95
+                                c0-6.351-5.148-11.5-11.5-11.5c-6.351,0-11.5,5.149-11.5,11.5v18.778c-53.86,2.543-105.576,22.88-146.722,57.926
+                                C39.029,133.758,9.756,185.09,0.166,241.194c-0.001,0.001-0.001,0.002-0.001,0.003h0c-0.19,1.117-0.213,2.228-0.084,3.302
+                                c0.633,5.352,4.953,9.627,10.447,10.094c3.066,0.264,5.971-0.71,8.207-2.519c0.923-0.746,1.737-1.639,2.401-2.657
+                                c0.56-0.858,1.011-1.8,1.33-2.808c6.677-19.97,25.288-33.378,46.357-33.378c21.121,0,39.77,13.469,46.403,33.517
+                                c1.558,4.708,5.958,7.887,10.918,7.887c4.959,0,9.36-3.179,10.917-7.887c6.635-20.048,25.283-33.517,46.404-33.517
+                                c20.564,0,38.78,12.773,45.851,31.951v175.893c0,15.788-12.822,29.125-28,29.125c-15.439,0-28-12.561-28-28
+                                c0-6.351-5.149-11.5-11.5-11.5c-6.351,0-11.5,5.149-11.5,11.5c0,28.122,22.878,51,51,51c13.64,0,26.503-5.561,36.218-15.658
+                                c9.532-9.908,14.782-22.858,14.782-36.467V245.016c7.111-19.087,25.284-31.785,45.79-31.785c21.121,0,39.771,13.47,46.404,33.518
+                                c1.559,4.708,5.959,7.887,10.918,7.887c4.959,0,9.359-3.179,10.918-7.887c6.635-20.048,25.282-33.518,46.403-33.518
+                                c21.12,0,39.769,13.47,46.403,33.518c1.516,4.579,5.728,7.725,10.548,7.88l0.06,0.002c0.131,0.004,0.276,0.007,0.39,0.006
+                                c6.352,0,11.5-5.149,11.5-11.5C481.649,242.222,481.543,241.333,481.341,240.48z M412.749,190.231
+                                c-23,0-44.007,10.863-57.321,28.473c-13.314-17.61-34.321-28.473-57.322-28.473c-23,0-44.006,10.862-57.32,28.473
+                                c-13.315-17.61-34.321-28.473-57.321-28.473c-23,0-44.006,10.862-57.321,28.473c-13.315-17.61-34.321-28.473-57.321-28.473
+                                c-11.572,0-22.639,2.75-32.477,7.726C69.786,116.625,149.426,61.45,240.815,61.45c91.402,0,171.052,55.191,204.484,136.544
+                                C435.443,192.994,424.35,190.231,412.749,190.231z"/>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3">
+                         <div class="block block-rounded mb-0 block-overview">
+                          <div class="block-content block-content-full">
+                            <dl class="overview-value mt-0 mb-1">
+                              <dt class="fs-28 fw-bold">12</dt>
+                              <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Số nhân viên đi muộn">Số nhân viên đi muộn</dd>
+                            </dl>
+                            <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                              <i class="ti-timer fs-28 icon-grey"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3">
+                        <div class="block block-rounded mb-0 block-overview">
+                          <div class="block-content block-content-full">
+                            <dl class="overview-value mt-0 mb-1">
+                              <dt class="fs-28 fw-bold">12</dt>
+                              <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Số nhân viên về sớm">Số nhân viên về sớm</dd>
+                            </dl>
+                            <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                              <i class="ti-timer fs-28 icon-red"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-3">
+                        <div class="block block-rounded mb-0 block-overview">
+                          <div class="block-content block-content-full">
+                            <dl class="overview-value mt-0 mb-1">
+                              <dt class="fs-28 fw-bold">12</dt>
+                              <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Nhân viên đăng ký tăng ca">Nhân viên đăng ký tăng ca</dd>
+                            </dl>
+                            <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490" class="icon-overview green">
+                                <g>
+                                <path d="M276.161,58.174V20.417h30.495V0h-81.407v20.417h30.495V58.36c-22.555,1.258-44.569,5.978-65.597,14.11
+                                c-5.258,2.033-7.871,7.945-5.836,13.204c2.039,5.263,7.95,7.885,13.204,5.836c22.46-8.682,46.177-13.089,70.492-13.089
+                                c107.845,0,195.583,87.738,195.583,195.584c0,107.841-87.739,195.578-195.583,195.578c-100.347,0-183.273-75.972-194.315-173.416
+                                l57.175,47.177c4.347,3.588,10.782,2.971,14.37-1.381c3.589-4.347,2.971-10.781-1.38-14.37l-75.077-61.948
+                                c-2.632-2.517-10.856-4.775-15.487,3.046L7.24,354.446c-2.667,4.969-0.953,11.453,4.162,13.822
+                                c6.519,3.019,11.983-0.733,13.822-4.162l29.626-55.166C71.599,411.485,160.799,490,268.006,490c119.101,0,216-96.895,216-215.995
+                                C484.007,157.636,391.496,62.479,276.161,58.174z"/>
+                                <path d="M268.006,227.2c-25.805,0-46.8,20.995-46.8,46.805c0,25.805,20.995,46.8,46.8,46.8c6.166,0,12.052-1.21,17.448-3.387
+                                l69.867,77.768c3.763,4.191,10.208,4.546,14.415,0.768c4.192-3.764,4.536-10.219,0.768-14.416l-68.119-75.821
+                                c7.704-8.345,12.421-19.486,12.421-31.711C314.806,248.195,293.811,227.2,268.006,227.2z M268.006,300.388
+                                c-14.55,0-26.383-11.833-26.383-26.383c0-14.55,11.833-26.388,26.383-26.388c14.55,0,26.383,11.838,26.383,26.388
+                                C294.39,288.555,282.556,300.388,268.006,300.388z"/>
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row items-push mb-1">
+                      <div class="col-lg-3 col-md-3">
+                        <div class="block block-rounded mb-0 block-overview">
+                          <div class="block-content block-content-full">
+                            <dl class="overview-value mt-0 mb-1">
+                              <dt class="fs-28 fw-bold">12</dt>
+                              <dd class="text-muted fs-13 mb-0" data-toggle="tooltip" title="Nhân viên sắp hết hạn HĐLĐ">Nhân viên sắp hết hạn HĐLĐ</dd>
+                            </dl>
+                            <div class="item item-rounded-lg bg-body-light block-overview__icon">
+                              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264.148 264.148" class="icon-overview grey">
+                                <g>
+                                <path d="M52.14,55.775h134.611c4.142,0,7.5-3.358,7.5-7.5c0-4.142-3.358-7.5-7.5-7.5H52.14c-4.142,0-7.5,3.358-7.5,7.5
+                                  C44.64,52.417,47.998,55.775,52.14,55.775z"/>
+                                <path d="M114.996,166.474H52.14c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h62.856c4.142,0,7.5-3.358,7.5-7.5
+                                  C122.496,169.832,119.138,166.474,114.996,166.474z"/>
+                                <path d="M114.996,208.373H52.14c-4.142,0-7.5,3.358-7.5,7.5c0,4.142,3.358,7.5,7.5,7.5h62.856c4.142,0,7.5-3.358,7.5-7.5
+                                  C122.496,211.731,119.138,208.373,114.996,208.373z"/>
+                                <path d="M221.867,54.974V25.296C221.867,11.348,210.519,0,196.571,0H42.32C28.372,0,17.024,11.348,17.024,25.296v213.556
+                                  c0,13.948,11.348,25.296,25.296,25.296h154.251c13.948,0,25.296-11.348,25.296-25.296v-86.13l23.775-65.321
+                                  C251.554,71.154,238.998,54.206,221.867,54.974z M206.868,238.852h-0.001c0,5.677-4.619,10.296-10.296,10.296H42.32
+                                  c-5.677,0-10.296-4.619-10.296-10.296V25.296C32.024,19.619,36.643,15,42.32,15h154.251c5.677,0,10.296,4.619,10.296,10.296
+                                  v35.751c-5.955,5.267-6.657,9.764-12.929,26.994c-0.92-3.102-3.787-5.367-7.188-5.367H52.14c-4.142,0-7.5,3.358-7.5,7.5
+                                  c0,4.142,3.358,7.5,7.5,7.5h134.611c1.529,0,2.949-0.46,4.135-1.245l-10.244,28.145H52.14c-4.142,0-7.5,3.358-7.5,7.5
+                                  c0,4.142,3.358,7.5,7.5,7.5h123.042l-16.301,44.788c-0.511,1.404-0.591,2.929-0.229,4.379l7.218,28.946
+                                  c1.286,5.155,7.393,7.37,11.686,4.253l24.136-17.535c2.375-1.726,2.578-3.332,5.176-10.472V238.852z M231.546,82.271
+                                  l-24.227,66.563v0.001l-16.3,44.783l-13.286,9.652l-3.973-15.934L214.288,75.99c1.725-4.742,7.007-7.222,11.77-5.489
+                                  C230.827,72.236,233.283,77.501,231.546,82.271z"/>
+                                </g>
+                              </svg>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title"><i class="ti-calendar text-muted mr-05"></i>Lịch làm việc bộ phận</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                            <div class="box-filter mb-1">
+                              <div class="row">
+                                <div class="col-lg-2 col-md-6 col-sm-6">
+                                  <label class="form-label" for="">Từ ngày</label>
+                                  <input type="text" class="form-control form-control-sm" id="" name="" placeholder="dd/mm/yyyy">
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6">
+                                  <label class="form-label" for="">Đến ngày</label>
+                                  <input type="text" class="form-control form-control-sm" id="" name="" placeholder="dd/mm/yyyy">
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                  <label class="form-label" for="">Bộ phận</label>
+                                  <input type="text" class="form-control form-control-sm" id="" name="" placeholder="Xem theo bộ phận">
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6">
+                                  <label class="form-label" for="">Nhân viên</label>
+                                  <input type="text" class="form-control form-control-sm" id="" name="" placeholder="Xem theo nhân viên">
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                  <label class="form-label" for="">Từ khóa</label>
+                                  <div class="input-group">
+                                    <input type="text" class="form-control form-control-sm" id="" placeholder="Từ khóa...">
+                                    <button type="button" class="btn btn-filter"><i class="ti-search"></i></button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                               <div class="col-lg-12 col-md-12">
+                                  <div class="table-responsive">
+                                      <table class="table table-bordered user-details" id="data-calendar">
+                                        <thead>
+                                          <tr>
+                                            <th class="text-center">STT</th>
+                                            <th class="text-left">Mã nhân viên</th>
+                                            <th class="text-left">Nhân viên</th>
+                                            <th class="text-left">Bộ phận</th>
+                                            <th class="text-left">Chức vụ</th>
+                                            <th class="text-left">Vị trí</th>
+                                            <th class="text-center">0142022<p>Thứ 2</p></th>
+                                            <th class="text-center">0242022<p>Thứ 3</p></th>
+                                            <th class="text-center">0342022<p>Thứ 4</p></th>
+                                            <th class="text-center">0442022<p>Thứ 5</p></th>
+                                            <th class="text-center">0542022<p>Thứ 6</p></th>
+                                            <th class="text-center">0642022<p>Thứ 7</p></th>
+                                            <th class="text-center">0742022<p>CN</p></th>
+                                            <th class="text-center">0842022<p>Thứ 2</p></th>
+                                            <th class="text-center">0942022<p>Thứ 3</p></th>
+                                            <th class="text-center">1042022<p>Thứ 4</p></th>
+                                            <th class="text-center">1142022<p>Thứ 5</p></th>
+                                            <th class="text-center">1242022<p>Thứ 6</p></th>
+                                            <th class="text-center">1342022<p>Thứ 7</p></th>
+                                            <th class="text-center">1442022<p>CN</p></th>
+                                            <th class="text-center">1542022<p>Thứ 2</p></th>
+                                            <th class="text-center">1642022<p>Thứ 3</p></th>
+                                            <th class="text-center">1742022<p>Thứ 4</p></th>
+                                            <th class="text-center">1842022<p>Thứ 5</p></th>
+                                            <th class="text-center">1942022<p>Thứ 6</p></th>
+                                            <th class="text-center">2042022<p>Thứ 7</p></th>
+                                            <th class="text-center">2142022<p>CN</p></th>
+                                            <th class="text-center">2242022<p>Thứ 2</p></th>
+                                            <th class="text-center">2342022<p>Thứ 3</p></th>
+                                            <th class="text-center">2442022<p>Thứ 4</p></th>
+                                            <th class="text-center">2542022<p>Thứ 5</p></th>
+                                            <th class="text-center">2642022<p>Thứ 6</p></th>
+                                            <th class="text-center">2742022<p>Thứ 7</p></th>
+                                            <th class="text-center">2842022<p>CN</p></th>
+                                            <th class="text-center">2942022<p>Thứ 2</p></th>
+                                            <th class="text-center">3042022<p>Thứ 3</p></th>
+                                            <th class="text-center">3142022<p>Thứ 4</p></th>
+
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-left">NV0001</td>
+                                            <td class="text-left">Nguyễn Văn A</td>
+                                            <td class="text-left">Dự án</td>
+                                            <td class="text-left">NV</td>
+                                            <td class="text-left">NV</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                            <td class="text-center">NT</td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    
+    <!---- Modal Birthday start----->
+    <div class="modal" id="side-customer-birthday">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="mb-0">
+            <div class="block-header block-header-default">
+              <h3 class="block-title">Danh sách sinh nhật tháng</h3>
+              <div class="block-options">
+                <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                  <i class="ti-close"></i>
+                </button>
+              </div>
+            </div>
+            <div class="block-content">
+              <div class="row mb-1">
+                <div class="col-lg-12 col-md-12">
+                  <table class="table table-borderless table-striped table-vcenter">
+                    <tbody>
+                      <tr>
+                        <td class="text-left">
+                          Nguyễn Phong Hồng Duy
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">20/06</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">
+                          Nguyễn Tất Phong
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">22/06</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">
+                          Hoàng Minh Quang
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">25/06</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">
+                          Nguyễn Phong Hồng Duy
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">20/06</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">
+                          Nguyễn Tất Phong
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">22/06</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-left">
+                          Hoàng Minh Quang
+                        </td>
+                        <td class="text-right">
+                          <i class="ti-gift text-primary"></i><span class="date-birth">25/06</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---- Modal Birthday end ----->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $("#sidebarToggle").click(function (e) {
+          $('#layoutSidenav').toggleClass('in');
+          e.stopPropagation()
+      });
+      $(".btn-viewtime").on("click", function() {
+        $(".btn-viewtime").removeClass("current");
+        $(this).addClass("current");
+      });
+      </script>
+  </body>
+</html>

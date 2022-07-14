@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png"> -->
+
+    <title>Profile</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/hrm.css" rel="stylesheet">
+    <link href="css/themify-icons.css" rel="stylesheet" />
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    </div>
+    <div class="layout-hrm" id="layoutSidenav">
+      <div class="sidebar mt-1">
+        <nav class="sb-sidenav accordion sb-sidenav-itg">
+            <div class="sb-sidenav-menu">
+                <div class="nav" id="menuLeft">
+                    <a class="nav-link active" href="#profile">
+                        <div class="sb-nav-link-icon"><i class="ti-agenda"></i></div>
+                        <div class="sidemenu-item-title">Hồ sơ nhân sự</div>
+                        <div class="sidemenu-item-label">Hồ sơ</div>
+                    </a>
+                    <a class="nav-link" href="#btabs-static-days">
+                        <div class="sb-nav-link-icon"><i class="ti-calendar"></i></div>
+                        <div class="sidemenu-item-title">Ngày công, phép</div>
+                        <div class="sidemenu-item-label">Công, phép</div>
+                    </a>
+                    <a class="nav-link" href="#btabs-static-kpi">
+                        <div class="sb-nav-link-icon"><i class="ti-stats-up"></i></div>
+                        <div class="sidemenu-item-title">Thông tin doanh số</div>
+                        <div class="sidemenu-item-label">Doanh số</div>
+                    </a>
+                    <!-- Sidebar Toggle-->
+                    <div class="btn-toogle" id="sidebarToggle" ><div class="btn-bg"><i class="ti-angle-left"></i></div></div>
+                </div>
+            </div>
+        </nav>
+      </div>
+      <div class="content" id="layoutSidenav_content">
+        <main>
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-lg-12 col-md-12">
+                <div class="bg-image" style="background-image: url('assets/img/bgprofile.jpg');">
+                    <div class="bg-black-50">
+                      <div class="text-center profile-head">
+                        <div class="avatar mt-2">
+                          <div class="avatar-block">
+                            <div class="outer" style="background-image: url('assets/img/avatar1.jpg');">
+                              <div class="inner">
+                                <input class="inputfile" type="file" name="pic" accept="image/*">
+                                <label><i class="ti-instagram icon-change"></i></label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <h4 class="text-white mb-0">Phan Minh Châu</h4>
+                        <span class="text-white-75 profile-position">Trưởng nhóm kinh doanh - Phòng kinh doanh khu vực Miền Bắc</span>
+                      </div>
+                    </div>
+                    <div class="cover-block"><button type="button" class="btn btn-sm btn-outline-white" data-toggle="modal" data-target="#modal-cover"><i class="ti-instagram mr-05"></i>Cập nhật ảnh bìa</button></div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-lg-12 col-md-12">
+                <div class="block block-rounded">
+                   <div id="header">
+                      <nav id="main-nav">
+                        <a href="#btabs-static-profile" class="active">Sơ yếu lý lịch</a>
+                        <a href="#btabs-static-work">Công việc</a>
+                        <a href="#btabs-static-strong">Sức khỏe &amp; Bảo hiểm</a>
+                        <a href="#btabs-static-benefit">Lương &amp; Tài khoản ngân hàng</a>
+                        <a href="#btabs-static-award">Khen thưởng, Kỷ luật</a>
+                        <a href="#btabs-static-accident">Thống kê tai nạn</a>
+                      </nav>
+                    </div>
+                    <div id="profile">
+                      <div class="content-profile" id="btabs-static-profile">
+                        <div class="block-update__infor">
+                          <h2 class="title-profile">Sơ yếu lý lịch</h2>
+                          <button type="button" class="btn btn-sm btn-outline-primary"><i class="ti-pencil-alt mr-05"></i>Cập nhật thông tin</button>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Thông tin cá nhân</h3>
+                            </div>
+                            <div class="block-content block-content-full">
+                                <div class="row mb-1">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Mã DVCS</label>
+                                      <div class="data-user">00000000</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Mã nhân viên</label>
+                                      <div class="data-user">ITG0000023</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Họ và tên</label>
+                                      <div class="data-user">Phan Minh Châu</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Giới tính</label>
+                                      <div class="data-user">Nữ</div>
+                                  </div>
+                                </div>
+                                <div class="row mb-1">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Ngày sinh</label>
+                                      <div class="data-user">20/12/1980</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Quốc tịch</label>
+                                      <div class="data-user">Việt Nam</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Dân tộc</label>
+                                      <div class="data-user">Kinh</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Tôn giáo</label>
+                                      <div class="data-user">Không</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Số điện thoại</label>
+                                      <div class="data-user">0000000000</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Email</label>
+                                      <div class="data-user">0000000000@gmail.com</div>
+                                  </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Địa chỉ</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                                <div class="row">
+                                  <div class="col-lg-6 col-md-12">
+                                      <label class="form-label" for="example-ltf-email">Hộ khẩu thường trú</label>
+                                      <div class="data-user">Số 297 Nguyễn Xiển, Thanh Xuân, Hà Nội</div>
+                                  </div>
+                                  <div class="col-lg-6 col-md-12">
+                                      <label class="form-label" for="example-ltf-email">Nơi ở hiện tại</label>
+                                      <div class="data-user">Số 297 Nguyễn Xiển, Thanh Xuân, Hà Nội</div>
+                                  </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Giấy tờ tuỳ thân</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                                <div class="row mb-1">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Loại giấy tờ</label>
+                                      <div class="data-user">CMND</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Số giấy tờ</label>
+                                      <div class="data-user">000000000000</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Ngày cấp</label>
+                                      <div class="data-user">000000000000</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Nơi cấp</label>
+                                      <div class="data-user">00000000000000</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Loại giấy tờ</label>
+                                      <div class="data-user">CCCD</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Số giấy tờ</label>
+                                      <div class="data-user">000000000000</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Ngày cấp</label>
+                                      <div class="data-user">000000000000</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Nơi cấp</label>
+                                      <div class="data-user">00000000000000</div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Trình độ học vấn</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                                <div class="row mb-2">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Trình độ văn hóa</label>
+                                      <div class="data-user">Đại Học</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Trình độ chuyên môn</label>
+                                      <div class="data-user">Cử nhân</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Hệ đào tạo</label>
+                                      <div class="data-user">Chính Quy</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Đơn vị đào tạo</label>
+                                      <div class="data-user">Đại Học Quốc Gia Hà Nội</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Chuyên ngành</label>
+                                      <div class="data-user">Công Nghệ Thông Tin</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Năm tốt nghiệp</label>
+                                      <div class="data-user">2020</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Xếp loại</label>
+                                      <div class="data-user">Khá</div>
+                                  </div>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Kinh nghiệm làm việc</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                              <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                  <div class="table-responsive">
+                                      <table id="" class="table table-bordered user-details">
+                                        <thead>
+                                          <tr>
+                                            <th class="text-left">Từ tháng</th>
+                                            <th class="text-left">Đến tháng</th>
+                                            <th class="text-left">Nơi làm việc</th>
+                                            <th class="text-left">Vị trí công việc</th>
+                                            <th class="text-left">Mô tả công việc</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="text-left">mm/yyyy</td>
+                                            <td class="text-left">mm/yyyy</td>
+                                            <td class="text-left">00000000000000000</td>
+                                            <td class="text-left">00000000000000000</td>
+                                            <td class="text-left">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="text-left">mm/yyyy</td>
+                                            <td class="text-left">mm/yyyy</td>
+                                            <td class="text-left">00000000000000000</td>
+                                            <td class="text-left">00000000000000000</td>
+                                            <td class="text-left"></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Bằng cấp, chứng chỉ, kỹ năng</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                              <div class="row">
+                                  <div class="col-lg-6 col-md-6 col-xs-12">
+                                    <div class="block block-rounded block-bordered">
+                                      <div class="block-header border-bottom">
+                                        <h3 class="block-title">Bằng cấp chứng chỉ</h3>
+                                      </div>
+                                      <div class="block-content pt-0">
+                                        <div class="row items-push">
+                                          <table class="table table-borderless table-hover table-vcenter mb-0">
+                                            <tbody>
+                                              <tr>
+                                                <td style="width: 80px;">
+                                                  <img class="img-fluid" src="assets/img/photo10.jpg" alt="">
+                                                </td>
+                                                <td>
+                                                  <span class="h6 title-certificate">Chứng chỉ tin học văn phòng</span>
+                                                  <div class="text-muted font-s13">
+                                                    <p class="desc">Số: 000000000 - Xếp loại: B - Điểm số: 8.5 - Cấp bởi: Trung Tâm Tin Học Quốc Gia</p>
+                                                    <p class="desc">Ngày cấp: dd/mm/yyyy - Ngày hết hạn: dd/mm/yyyy</p>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td style="width: 80px;">
+                                                  <img class="img-fluid" src="assets/img/photo10.jpg" alt="">
+                                                </td>
+                                                <td>
+                                                  <span class="h6 title-certificate">Chứng chỉ tin học văn phòng</span>
+                                                  <div class="text-muted font-s13">
+                                                    <p class="desc">Số: 000000000 - Xếp loại: B - Điểm số: 8.5 - Cấp bởi: Trung Tâm Tin Học Quốc Gia</p>
+                                                    <p class="desc">Ngày cấp: dd/mm/yyyy - Ngày hết hạn: dd/mm/yyyy</p>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-6 col-md-6 col-xs-12">
+                                    <div class="block block-rounded block-bordered">
+                                      <div class="block-header border-bottom">
+                                        <h3 class="block-title">Kỹ năng</h3>
+                                      </div>
+                                      <div class="block-content pt-0">
+                                        <div class="row items-push">
+                                          <table class="table table-borderless table-hover table-vcenter mb-0">
+                                            <tbody>
+                                              <tr>
+                                                <td style="width: 80px;">
+                                                  <img class="img-fluid" src="assets/img/photo10.jpg" alt="">
+                                                </td>
+                                                <td>
+                                                  <span class="h6 title-certificate">Tên kỹ năng</span>
+                                                  <div class="fs-sm text-muted font-s13">
+                                                    <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td style="width: 80px;">
+                                                  <img class="img-fluid" src="assets/img/photo10.jpg" alt="">
+                                                </td>
+                                                <td>
+                                                  <span class="h6 title-certificate">Tên kỹ năng</span>
+                                                  <div class="fs-sm text-muted font-s13">
+                                                    <p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Thông tin nhân thân</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                                <div class="row">
+                                  <div class="col-lg-12 col-md-12">
+                                    <div class="table-responsive">
+                                      <table id="" class="table table-bordered user-details">
+                                        <thead>
+                                          <tr>
+                                            <th class="text-center">STT</th>
+                                            <th class="text-left">Họ và tên</th>
+                                            <th class="text-left">Mối quan hệ</th>
+                                            <th class="text-left">Ngày sinh</th>
+                                            <th class="text-left">Giới tính</th>
+                                            <th class="text-left">MST</th>
+                                            <th class="text-left">CMND/CCCD</th>
+                                            <th class="text-left">Điện thoại</th>
+                                            <th class="text-center">Giảm trừ GC</th>
+                                            <th class="text-right">Ngày bắt đầu</th>
+                                            <th class="text-right">Ngày kết thúc</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-left">Phan Văn A</td>
+                                            <td class="text-left">Bố đẻ</td>
+                                            <td class="text-left">dd/mm/yyyy</td>
+                                            <td class="text-left">Nam</td>
+                                            <td class="text-left">00000000000</td>
+                                            <td class="text-left">00000000000</td>
+                                            <td class="text-left">0000000000</td>
+                                            <td class="text-center"><i class="fas fa-check text-available"></i></td>
+                                            <td class="text-right">dd/mm/yyyy</td>
+                                            <td class="text-right">dd/mm/yyyy</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="text-center">2</td>
+                                            <td class="text-left">Nguyễn Thị B</td>
+                                            <td class="text-left">Mẹ đẻ</td>
+                                            <td class="text-left">dd/mm/yyyy</td>
+                                            <td class="text-left">Nữ</td>
+                                            <td class="text-left"></td>
+                                            <td class="text-left"></td>
+                                            <td class="text-left"></td>
+                                            <td class="text-center"><i class="fas fa-check text-available"></i></td>
+                                            <td class="text-right">dd/mm/yyyy</td>
+                                            <td class="text-right">dd/mm/yyyy</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="content-profile" id="btabs-static-work">
+                        
+                        <div class="block-update__infor">
+                          <h2 class="title-profile">Thông tin công việc</h2>
+                          <button type="button" class="btn btn-sm btn-outline-primary"><i class="ti-pencil-alt mr-05"></i>Cập nhật thông tin</button>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Công việc</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+
+                                <div class="row mb-1">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Trạng thái nhân viên</label>
+                                      <div class="data-user"><span class="d-inline-block rounded-pill bg-available text-white label-type">Đang làm việc</span></div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Số thẻ ra vào</label>
+                                      <div class="data-user">000000000000</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Ngày vào thử việc</label>
+                                      <div class="data-user">dd/mm/yyy</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Ngày kết thúc thử việc</label>
+                                      <div class="data-user">dd/mm/yyy</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Ngày vào chính thức</label>
+                                      <div class="data-user">dd/mm/yyy</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Ngày nghỉ</label>
+                                      <div class="data-user">dd/mm/yyy</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Lý do nghỉ</label>
+                                      <div class="data-user"></div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Thông tin Công việc theo luật</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                                <div class="row">
+                                  <div class="col-lg-3 col-md-6">
+                                      <label class="form-label" for="">Đối tượng</label>
+                                      <div class="data-user">Lao động trong nước</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6">
+                                      <label class="form-label" for="">Tình trạng cư trú</label>
+                                      <div class="data-user">Tình trạng cư trú</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6">
+                                      <label class="form-label" for="">Tình trạng hôn nhân</label>
+                                      <div class="data-user">Độc thân</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6">
+                                      <label class="form-label" for="">MST cá nhân</label>
+                                      <div class="data-user">000000000000</div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Quá trình làm việc</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                              <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                  <div class="table-responsive">
+                                      <table id="" class="table table-bordered user-details">
+                                        <thead>
+                                          <tr>
+                                            <th class="text-center">STT</th>
+                                            <th class="text-left">Mã ĐVCS</th>
+                                            <th class="text-left">Bộ phận</th>
+                                            <th class="text-left">Chức vụ</th>
+                                            <th class="text-left">Vị trí làm việc</th>
+                                            <th class="text-left">Hành động</th>
+                                            <th class="text-right">Ngày bắt đầu</th>
+                                            <th class="text-right">Ngày kết thúc</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-left">01</td>
+                                            <td class="text-left">Kinh Doanh Miền Bắc</td>
+                                            <td class="text-left">Trưởng Phòng Kinh Doanh</td>
+                                            <td class="text-left">Trưởng Phòng</td>
+                                            <td class="text-left">0000000000</td>
+                                            <td class="text-right">dd/mm/yyyy</td>
+                                            <td class="text-right">dd/mm/yyyy</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Thông tin hợp đồng</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                                <div class="row">
+                                  <div class="col-lg-12 col-md-12">
+                                    <div class="table-responsive">
+                                      <table id="" class="table table-bordered user-details">
+                                        <thead>
+                                          <tr>
+                                            <th class="text-center">STT</th>
+                                            <th class="text-left">Số hợp đồng</th>
+                                            <th class="text-left">Tên hợp đồng</th>
+                                            <th class="text-left">Loại hợp đồng</th>
+                                            <th class="text-right">Ngày bắt đầu</th>
+                                            <th class="text-right">Ngày kết thúc</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-left">HĐ0020</td>
+                                            <td class="text-left">HĐ LĐ 0020</td>
+                                            <td class="text-left">Hợp đồng không xác định thời hạn</td>
+                                            <td class="text-right">dd/mm/yyyy</td>
+                                            <td class="text-right">dd/mm/yyyy</td>
+                                          </tr>
+                                          <tr>
+                                            <td class="text-center">2</td>
+                                            <td class="text-left">HĐ0019</td>
+                                            <td class="text-left">HĐ LĐ 0019</td>
+                                            <td class="text-left">Hợp đồng 1 năm</td>
+                                            <td class="text-right">dd/mm/yyyy</td>
+                                            <td class="text-right">dd/mm/yyyy</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Trạng thái làm việc</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                              <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                  <div class="table-responsive">
+                                    <table id="" class="table table-bordered user-details">
+                                      <thead>
+                                        <tr>
+                                          <th class="text-center">STT</th>
+                                          <th class="text-right">Từ ngày</th>
+                                          <th class="text-right">Đến ngày</th>
+                                          <th class="text-left">Trạng thái làm việc</th>
+                                          <th class="text-center">Đóng bảo hiểm</th>
+                                          <th class="text-left">Ghi chú</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="text-center">1</td>
+                                          <td class="text-right">dd/mm/yyyy</td>
+                                          <td class="text-right">dd/mm/yyyy</td>
+                                          <td class="text-left">Đang làm việc</td>
+                                          <td class="text-center"><i class="fas fa-check text-available"></i></td>
+                                          <td class="text-right"></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="content-profile" id="btabs-static-strong">
+                        
+                        <div class="block-update__infor">
+                          <h2 class="title-profile">Sức khỏe và Bảo hiểm</h2>
+                          <button type="button" class="btn btn-sm btn-outline-primary"><i class="ti-pencil-alt mr-05"></i>Cập nhật thông tin</button>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Thông tin sức khỏe</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                                <div class="row mb-1">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Chiều cao</label>
+                                      <div class="data-user">175cm</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Cân nặng</label>
+                                      <div class="data-user">75Kg</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Nhóm máu</label>
+                                      <div class="data-user">A</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Tình trạng sức khỏe</label>
+                                      <div class="data-user">Bình thường</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-12 col-md-12">
+                                      <label class="form-label" for="">Ghi chú tình trạng sức khỏe</label>
+                                      <div class="data-user">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">THÔNG TIN BẢO HIỂM</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                                <div class="row mb-1">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Số sổ BHXH</label>
+                                      <div class="data-user">0000000000</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Ngày cấp BHXH</label>
+                                      <div class="data-user">dd/mm/yyyy</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Ngày tham gia BHXH</label>
+                                      <div class="data-user">dd/mm/yyyy</div>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Số thẻ BHYT</label>
+                                      <div class="data-user">0000000000</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Ngày cấp BHYT</label>
+                                      <div class="data-user">dd/mm/yyyy</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Ngày tham gia BHYT</label>
+                                      <div class="data-user">dd/mm/yyyy</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Nơi đăng ký KCB</label>
+                                      <div class="data-user">0000000000</div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="content-profile" id="btabs-static-benefit">
+                        <h2 class="title-profile mb-2">Lương và Tài khoản ngân hàng</h2>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Thông tin tài khoản ngân hàng</h3>
+                              <div class="block-options">
+                                <button type="button" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#modal-bank-account"><i class="ti-plus mr-05"></i>Thêm tài khoản</button>
+                              </div>
+                            </div>      
+                            <div class="block-content block-content-full">
+                                <div class="row mb-1">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Ngân hàng</label>
+                                      <div class="data-user">BIDV</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Số tài khoản</label>
+                                      <div class="data-user">0000000000000</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Chủ tài khoản</label>
+                                      <div class="data-user">Phan Minh Châu</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="">Loại tài khoản</label>
+                                      <div class="data-user">
+                                        <span class="d-inline-block rounded-pill bg-warning-light text-warning label-type">Thanh toán lương</span>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="row mb-0">
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Ngân hàng</label>
+                                      <div class="data-user">BIDV</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Số tài khoản</label>
+                                      <div class="data-user">0000000000000</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Chủ tài khoản</label>
+                                      <div class="data-user">Phan Minh Châu</div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-6 col-sm-6">
+                                      <label class="form-label" for="example-ltf-email">Loại tài khoản</label>
+                                      <div class="data-user"></div>
+                                  </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="card">
+                          <div class="card-header mb-1">
+                            <strong>Lương thực nhận hàng năm</strong>
+                          </div>
+                          <div class="card-body">
+                            <div class="row mb-2">
+                              <div class="col-lg-2 col-md-2">
+                                <label class="form-label" for="">Xem theo năm</label>
+                                <select class="form-control form-control-sm" name="">
+                                  <option selected="">2022</option>
+                                  <option value="1">2021</option>
+                                  <option value="2">2020</option>
+                                </select>
+                              </div>
+                            </div>
+                            <canvas id="myBarChart" width="100%" height="30"></canvas>
+                            <div class="table-responsive mt-2">
+                              <table id="" class="table table-bordered user-details">
+                                <thead>
+                                  <tr>
+                                    <th>Tháng 1</th>
+                                    <th>Tháng 2</th>
+                                    <th>Tháng 3</th>
+                                    <th>Tháng 4</th>
+                                    <th>Tháng 5</th>
+                                    <th>Tháng 6</th>
+                                    <th>Tháng 7</th>
+                                    <th>Tháng 8</th>
+                                    <th>Tháng 9</th>
+                                    <th>Tháng 10</th>
+                                    <th>Tháng 11</th>
+                                    <th>Tháng 12</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>000000</td>
+                                    <td>000000</td>
+                                    <td>000000</td>
+                                    <td>000000</td>
+                                    <td>000000</td>
+                                    <td>000000</td>
+                                    <td>000000</td>
+                                    <td>000000</td>
+                                    <td>000000</td>
+                                    <td>000000</td>
+                                    <td>000000</td>
+                                    <td>000000</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="content-profile" id="btabs-static-award">
+                        <h2 class="title-profile">Khen thưởng, Kỷ luật</h2>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Khen thưởng</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                                <div class="row">
+                                  <div class="col-lg-12 col-md-12">
+                                    <div class="table-responsive">
+                                      <table id="" class="table table-bordered user-details">
+                                        <thead>
+                                          <tr>
+                                            <th class="text-center">STT</th>
+                                            <th class="text-left">Số quyết định</th>
+                                            <th class="text-left">Ngày quyết định</th>
+                                            <th class="text-left">Tên đợt khen thưởng</th>
+                                            <th class="text-left">Hình thức</th>
+                                            <th class="text-left">Giá trị</th>
+                                            <th class="text-left">Lý do</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-left">00000000000</td>
+                                            <td class="text-left">dd/mm/yyyy</td>
+                                            <td class="text-left">00000000000</td>
+                                            <td class="text-left">00000000000</td>
+                                            <td class="text-left">00000000000</td>
+                                            <td class="text-left">00000000000</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block block-rounded">
+                            <div class="block-header block-header-default">
+                              <h3 class="block-title">Kỷ luật</h3>
+                            </div>      
+                            <div class="block-content block-content-full">
+                                <div class="row">
+                                  <div class="col-lg-12 col-md-12">
+                                    <div class="table-responsive">
+                                      <table id="" class="table table-bordered user-details">
+                                        <thead>
+                                          <tr>
+                                            <th class="text-center">STT</th>
+                                            <th class="text-left">Số quyết định</th>
+                                            <th class="text-left">Ngày quyết định</th>
+                                            <th class="text-left">Hình thức</th>
+                                            <th class="text-left">Ngày vi phạm</th>
+                                            <th class="text-left">Ngày kết thúc</th>
+                                            <th class="text-left">Nội dung vi phạm</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="text-center">1</td>
+                                            <td class="text-left">00000000000</td>
+                                            <td class="text-left">dd/mm/yyyy</td>
+                                            <td class="text-left">00000000000</td>
+                                            <td class="text-left">00000000000</td>
+                                            <td class="text-left">00000000000</td>
+                                            <td class="text-left">00000000000</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="content-profile" id="btabs-static-accident">
+                        <h2 class="title-profile">Thông tin Tai nạn</h2>
+                        <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Thông tin tai nạn</h3>
+                          </div>
+                          <div class="block-content block-content-full">
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12">
+                                <div class="table-responsive">
+                                  <table id="" class="table table-bordered user-details">
+                                    <thead>
+                                      <tr>
+                                        <th class="text-center">STT</th>
+                                        <th class="text-left">Số TK tai nạn</th>
+                                        <th class="text-left">Trạng thái</th>
+                                        <th class="text-left">Nơi xảy ra</th>
+                                        <th class="text-right">Ngày xảy ra</th>
+                                        <th class="text-left">Tình trạng vết thương</th>
+                                        <th class="text-left">Nguyên nhân</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td class="text-center">1</td>
+                                        <td class="text-left">00000000000</td>
+                                        <td class="text-left">00000000000</td>
+                                        <td class="text-left">00000000000</td>
+                                        <td class="text-right">dd/mm/yyyy</td>
+                                        <td class="text-left">00000000000</td>
+                                        <td class="text-left">00000000000</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content-extend">
+                      <div class="content-profile" id="btabs-static-days">
+                        <h2 class="title-profile">Ngày công, ngày phép</h2>
+                        <div class="row mb-2">
+                          <div class="col-lg-2 col-md-2">
+                            <label class="form-label" for="">Xem theo năm</label>
+                            <select class="form-control form-control-sm" name="">
+                              <option selected="">2022</option>
+                              <option value="1">2021</option>
+                              <option value="2">2020</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Thông tin ngày công</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12">
+                                <div class="table-responsive">
+                                    <table id="" class="table table-bordered user-details">
+                                      <thead>
+                                        <tr>
+                                          <th class="text-left">Công chính</th>
+                                          <th class="text-left">Công làm thêm</th>
+                                          <th class="text-left">Tổng công</th>
+                                          <th class="text-left">Số giờ làm thêm</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td class="text-left">300</td>
+                                          <td class="text-left">19.25</td>
+                                          <td class="text-left"><strong>319.25</strong></td>
+                                          <td class="text-left">154h</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </div>
+                              </div>  
+                            </div>
+                          </div>
+                        </div>
+                        <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Thông tin phép năm</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12">
+                                <div class="table-responsive">
+                                <table id="" class="table table-bordered user-details">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-left">Phép đầu năm</th>
+                                      <th class="text-left">Phép theo quy định</th>
+                                      <th class="text-left">Phép thâm niên</th>
+                                      <th class="text-left">Tổng phép</th>
+                                      <th class="text-left">Tổng phép nghỉ</th>
+                                      <th class="text-left">Phép quyết toán</th>
+                                      <th class="text-left">Tổng phép còn lại</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td class="text-left">4</td>
+                                      <td class="text-left">12</td>
+                                      <td class="text-left">1</td>
+                                      <td class="text-left"><strong>17</strong></td>
+                                      <td class="text-left">8</td>
+                                      <td class="text-left">0</td>
+                                      <td class="text-left">9</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="content-profile" id="btabs-static-kpi">
+                        <h2 class="title-profile">Doanh số</h2>
+                        <div class="row mb-2">
+                          <div class="col-lg-2 col-md-2">
+                            <label class="form-label" for="">Xem theo năm</label>
+                            <select class="form-control form-control-sm" name="">
+                              <option selected="">2022</option>
+                              <option value="1">2021</option>
+                              <option value="2">2020</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="block block-rounded">
+                          <div class="block-header block-header-default">
+                            <h3 class="block-title">Thông tin doanh số</h3>
+                          </div>      
+                          <div class="block-content block-content-full">
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12">
+                                <canvas id="data-sales" height="100"></canvas>
+                                <div class="table-responsive mt-2">
+                                  <table id="datatablesSimple" class="table table-bordered user-details">
+                                    <thead>
+                                      <tr>
+                                        <th class="text-left">Tháng</th>
+                                        <th class="text-right">1</th>
+                                        <th class="text-right">2</th>
+                                        <th class="text-right">3</th>
+                                        <th class="text-right">4</th>
+                                        <th class="text-right">5</th>
+                                        <th class="text-right">6</th>
+                                        <th class="text-right">7</th>
+                                        <th class="text-right">8</th>
+                                        <th class="text-right">9</th>
+                                        <th class="text-right">10</th>
+                                        <th class="text-right">11</th>
+                                        <th class="text-right">12</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Doanh số</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                      </tr>
+                                      <tr>
+                                        <td>Thực thu</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                        <td class="text-right">000000</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>    
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!---- Modal bank account start ----->
+      <div class="modal" id="modal-bank-account" tabindex="-1">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="block block-rounded block-transparent mb-0">
+              <div class="block-header block-header-default">
+                <h3 class="block-title">Thêm tài khoản ngân hàng</h3>
+                <div class="block-options">
+                  <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                    <i class="ti-close"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="block-content fs-sm">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="block block-rounded block-bordered relative-block bg-grey">
+                      <div class="block-custom">
+                        <div class="row mb-1">
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Tên Ngân Hàng</label>
+                              <select class="form-control form-control-sm" name="">
+                                <option selected="">Chọn</option>
+                                <option value="1">..</option>
+                                <option value="2">..</option>
+                              </select>
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                              <label class="form-label" for="">Số tài khoản</label>
+                              <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                        </div>
+                        <div class="row mb-1">
+                          <div class="col-lg-6 col-md-12">
+                            <label class="form-label" for="">Chủ tài khoản</label>
+                            <input type="text" class="form-control form-control-sm" name="" placeholder="..." value="" >
+                          </div>
+                          <div class="col-lg-6 col-md-12">
+                            <label class="form-label" for="">Loại tài khoản</label>
+                            <select class="form-control form-control-sm" name="">
+                                <option selected="">Chọn</option>
+                                <option value="1">Thanh toán lương</option>
+                                <option value="2">Tài khoản cá nhân</option>
+                              </select>
+                          </div>
+                        </div>
+
+                        <div class="row mb-1">
+                          <div class="col-lg-12 col-md-12">
+                              <label class="form-label" for="">Ghi chú</label>
+                              <textarea class="form-control" cols="10" rows="2"></textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-12 col-md-12">
+                    <div class="btn-plus">
+                      <button type="button" class="btn btn-sm btn-outline-primary"><i class="ti-plus mr-05"></i>Thêm tài khoản</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-action">
+                <button type="button" class="btn btn-alt-secondary me-1" data-dismiss="modal">Hủy bỏ</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="ti-save mr-05"></i>Lưu thông tin</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---- Modal bank account end ----->
+
+     <!---- Modal cover ----->
+      <div class="modal" id="modal-cover">
+        <div class="modal-dialog modal-lg modal-dialog-slideleft" role="document">
+          <div class="modal-content">
+            <div class="mb-0">
+              <div class="block-header block-header-default">
+                <h3 class="block-title">Cập nhật ảnh bìa</h3>
+                <div class="block-options">
+                  <button type="button" class="btn-block-option" data-dismiss="modal" aria-label="Close">
+                    <i class="ti-close"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="block-content fs-sm">
+                <div class="row">
+                  <div class="col-md-12 col-lg-12">
+                    <div class="block-custom">
+                      <div class="row mb-2">
+                        <div class="col-lg-12 col-md-12">
+                          <h6>Chọn ảnh từ thư viện</h6>
+                        </div>
+                      </div>
+                      <div class="row mb-2">
+                        <div class="col-sm-4">
+                            <div class="img-cover selected"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="img-cover"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="img-cover"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                      </div>
+                      <div class="row mb-2">
+                        <div class="col-sm-4">
+                            <div class="img-cover"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="img-cover"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="img-cover"><img src="assets/img/bgprofile.jpg" alt=""></div>
+                        </div>
+                      </div>
+                      <div class="row mb-1">
+                        <div class="col-lg-12 col-md-12">
+                          <h6>Hoặc upload ảnh của bạn</h6>
+                          <div class="inner-cover">
+                            <input class="inputfile" type="file" name="pic" accept="image/*">
+                            <label><i class="ti-upload icon-change"></i> Chọn ảnh</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="bottom-cover">
+                <button type="button" class="btn btn-alt-secondary me-1" data-bs-dismiss="modal">Hủy bỏ</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><i class="ti-save mr-05"></i>Lưu thông tin</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---- Modal cover ----->
+     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script>
+      $("#sidebarToggle").click(function (e) {
+          $('#layoutSidenav').toggleClass('in');
+          e.stopPropagation()
+      });
+
+      $("#menuLeft .nav-link").on("click", function() {
+        $("#menuLeft .nav-link").removeClass("active");
+        $(this).addClass("active");
+      });
+      $(function() {
+         $('#main-nav a').on('click', function(evt) {
+          var menuHeight = $('#main-nav').outerHeight(true);
+          var element = $($(this).attr('href'));
+          var elementOffset = (element.offset().top) - (menuHeight) - 68;
+          $('html, body').stop().animate({
+            scrollTop: elementOffset
+          }, 100);
+          evt.preventDefault();
+         });
+      });
+      $(function() {
+         $('.nav .nav-link').on('click', function(evt) {
+          var menuHeight = $('#main-nav').outerHeight(true);
+          var element = $($(this).attr('href'));
+          var elementOffset = (element.offset().top) - (menuHeight) - 68;
+          $('html, body').stop().animate({
+            scrollTop: elementOffset
+          }, 100);
+          evt.preventDefault();
+         });
+      });
+ 
+    </script>
+    <script>
+          window.onload = function() {
+              var chartsale = document.getElementById('data-sales').getContext('2d');
+              window.myMixedChart = new Chart(chartsale, {
+                  type: 'bar',
+                  data: chartDatasale,
+                  options: {
+                    responsive: true,
+                    title: {
+                        display: false,
+                        text: ''
+                    },
+                    legend: {
+                        display: true,
+                        labels: {
+                            usePointStyle: true,
+                            boxWidth: 5,
+                            boxHeight: 5
+                        },
+                        position:'bottom'
+                    },
+                    scales: {
+                          xAxes: [{
+                                gridLines: {
+                                    display:false
+                                }
+                            }],
+
+                          yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                callback: function(value, index, values) {
+                                    return value + 'M';
+                                }
+                            },
+                            gridLines: {display:false}
+                         },]
+                    },
+                    tooltips: {
+                        mode: 'index',
+                        intersect: true
+                    }
+                }
+              });
+              
+          };
+      </script>
+      <script>
+        var chartDatasale = {
+            labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
+            datasets: [{
+                type: 'bar',
+                label: 'Doanh số',
+                backgroundColor: 'rgba(107,203,119,1)',
+                data: [500, 450, 410, 450, 410, 450, 410, 450, 410, 450, 410, 450]
+            }
+            , {
+                type: 'bar',
+                label: 'Thực thu',
+                backgroundColor:'rgba(77,150,255, 1)',
+                data: [400, 350, 310, 350, 310, 350, 310, 350, 310, 350, 310, 350]
+            }]
+        };
+      </script>
+    <script>
+      var timVine = document.getElementById("tim-vine");
+      var navbar = document.getElementById("main-nav");
+      var navPos = navbar.getBoundingClientRect().top;
+      var navbarLinks = document.querySelectorAll("#main-nav a");
+      var navleft = document.querySelectorAll("#menuLeft a");
+
+      window.addEventListener("scroll", function(e) {
+
+        var scrollPos = window.scrollY;
+        if (scrollPos > navPos) {
+          navbar.classList.add('sticky');
+        } else {
+          navbar.classList.remove('sticky');
+        }
+
+          navbarLinks.forEach(function(link) {
+            var section = document.querySelector(link.hash);
+            if (scrollPos > section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight ) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+          navleft.forEach(function(link) {
+            var section = document.querySelector(link.hash);
+            if (scrollPos > section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight ) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+      });
+    </script>
+  </body>
+</html>
