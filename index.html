@@ -120,23 +120,27 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const btn = document.getElementById("click-resume-home");
+    console.log("[track] found btn?", !!btn);
     if (!btn) return;
 
     btn.addEventListener("click", function () {
+      console.log("[track] clicked resume");
+      console.log("[track] window.__fa exists?", !!window.__fa);
+
       if (!window.__fa) return;
 
-      window.__fa.log("cta_click", {
-        cta_id: "click-resume-home",
-        cta_text: "Resume",
-        page_path: location.pathname,
-        open_type: "new_tab",
-        section: "Home",
-        event_callback: function () {
-          // callback chỉ để đảm bảo event được gửi
-          // KHÔNG cần làm gì thêm
-          console.log("cta_click sent");
-        }
-      });
+      try {
+        window.__fa.log("cta_click", {
+          cta_id: "click-resume-home",
+          cta_text: "Resume",
+          page_path: location.pathname,
+          open_type: "new_tab",
+          section: "Home"
+        });
+        console.log("[track] logEvent called");
+      } catch (err) {
+        console.error("[track] logEvent error", err);
+      }
     });
   });
 </script>
