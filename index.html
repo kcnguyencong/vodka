@@ -15,7 +15,7 @@
 			<div class="profile-info">
 				<div class="navigation">
 					<div class="nav-link"><a href="#" class="active"><strong>Work</strong></a></div>
-					<div class="nav-link"><a href="about.html">About</a></div>
+					<div class="nav-link"><a href="about.html" id="click-about-home">About</a></div>
 					<div class="nav-link contact"><a href="https://www.linkedin.com/in/cong-nguyen-64881699/" target="_new">Linkedin</a></div>
 					<div class="nav-link resume"><a id="click-resume-home" href="congnguyen-resume.pdf" target="_blank" rel="noopener">Resume</a></div>
 				</div>
@@ -118,23 +118,29 @@
   console.log("[firebase] __fa ready:", !!window.__fa);
 </script>
 <script>
+  const CTA_MAP = {
+    "click-resume-home": { cta_id: "click-resume-home", section: "Home" },
+    "click-work-home": { cta_id: "click-work-home", section: "Home" },
+    //"btn-pricing": { cta_id: "pricing", section: "Home" }
+    // ... thêm cho đủ 10 nút
+  };
+
   document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.getElementById("click-resume-home");
-    if (!btn) return;
+    Object.keys(CTA_MAP).forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
 
-    btn.addEventListener("click", function () {
-      console.log("[track] clicked");
-      console.log("[track] window.__fa exists?", !!window.__fa);
-      if (!window.__fa) return;
+      el.addEventListener("click", function () {
+        if (!window.__fa) return;
 
-      window.__fa.log("cta_click", {
-        cta_id: "click-resume-home",
-        cta_text: "Resume",
-        page_path: location.pathname,
-        open_type: "new_tab",
-        section: "Home"
+        const meta = CTA_MAP[id];
+        window.__fa.log("cta_click", {
+          cta_id: meta.cta_id,
+          cta_text: (el.textContent || "").trim().slice(0, 60),
+          page_path: location.pathname,
+          section: meta.section
+        });
       });
-      console.log("[track] sent cta_click");
     });
   });
 </script>
