@@ -90,16 +90,11 @@
 		</div>
 	</div>
 </main>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-analytics.js";
-	
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
+  import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-analytics.js";
+
   const firebaseConfig = {
     apiKey: "AIzaSyCLkdEMGPJCSS0r1X7iMq_bYccxZauIpUU",
     authDomain: "kiosk-7944b.firebaseapp.com",
@@ -110,37 +105,36 @@
     measurementId: "G-SVMMXWH88Z"
   };
 
-  // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-	window.__fa = {
-    log: (name, params) => logEvent(analytics, name, params)
+
+  // Test ngay trong module để chắc chắn logEvent tồn tại
+  console.log("[firebase] logEvent type:", typeof logEvent);
+
+  window.__fa = {
+    log: (name, params = {}) => logEvent(analytics, name, params)
   };
+
+  console.log("[firebase] window.__fa ready:", !!window.__fa);
 </script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const btn = document.getElementById("click-resume-home");
-    console.log("[track] found btn?", !!btn);
     if (!btn) return;
 
     btn.addEventListener("click", function () {
-      console.log("[track] clicked resume");
+      console.log("[track] clicked");
       console.log("[track] window.__fa exists?", !!window.__fa);
-
       if (!window.__fa) return;
 
-      try {
-        window.__fa.log("cta_click", {
-          cta_id: "click-resume-home",
-          cta_text: "Resume",
-          page_path: location.pathname,
-          open_type: "new_tab",
-          section: "Home"
-        });
-        console.log("[track] logEvent called");
-      } catch (err) {
-        console.error("[track] logEvent error", err);
-      }
+      window.__fa.log("cta_click", {
+        cta_id: "click-resume-home",
+        cta_text: "Resume",
+        page_path: location.pathname,
+        open_type: "new_tab",
+        section: "Home"
+      });
+      console.log("[track] sent cta_click");
     });
   });
 </script>
