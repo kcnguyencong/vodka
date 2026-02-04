@@ -113,21 +113,15 @@
 		</div>
 	</div>
 </main>
-		<script>
-  document.getElementById("click-resume-home").addEventListener("click", function (e) {
-    if (!window.__logEvent) return;
+<script>
+  document.getElementById("click-resume-home").addEventListener("click", function () {
+    if (!window.__fa) return;
 
-    e.preventDefault();
-
-    window.__logEvent("cta_click", {
-      cta_key: this.getAttribute("data-cta"),
-      cta_id: this.id,
-      text: (this.textContent || "").trim(),
-      page: window.location.pathname,
-      href: this.href
+    window.__fa.log("cta_click", {
+      cta_id: "click-resume-home",
+      cta_text: "Xem hồ sơ",
+      page_path: location.pathname
     });
-
-    setTimeout(() => (window.location.href = this.href), 150);
   });
 </script>
 </body>
