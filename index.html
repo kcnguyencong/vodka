@@ -40,7 +40,7 @@
 					<div class="nav-link"><a href="#" class="active"><strong>Work</strong></a></div>
 					<div class="nav-link"><a href="about.html">About</a></div>
 					<div class="nav-link contact"><a href="https://www.linkedin.com/in/cong-nguyen-64881699/" target="_new">Linkedin</a></div>
-					<div class="nav-link resume"><a id="click-resume-home" href="congnguyen-resume.pdf" target="_new">Resume</a></div>
+					<div class="nav-link resume"><a id="click-resume-home" href="congnguyen-resume.pdf" target="_blank" rel="noopener">Resume</a></div>
 				</div>
 				<div class="profile-picture">
 					<img src="vodka.png" alt="Vodka">
@@ -114,13 +114,20 @@
 	</div>
 </main>
 <script>
-  document.getElementById("click-resume-home").addEventListener("click", function () {
-    if (!window.__fa) return;
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("click-resume-home");
+    if (!btn) return;
 
-    window.__fa.log("cta_click", {
-      cta_id: "click-resume-home",
-      cta_text: "Xem hồ sơ",
-      page_path: location.pathname
+    btn.addEventListener("click", function () {
+      if (!window.__fa) return;
+
+      window.__fa.log("cta_click", {
+        cta_id: "click-resume-home",
+        cta_text: "Xem hồ sơ",
+        page_path: location.pathname,
+        open_type: "new_tab",
+		section:"Home"
+      });
     });
   });
 </script>
