@@ -7,6 +7,29 @@
   <link rel="stylesheet" type="text/css" href="vodka.css">
 </head>
 <body>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCLkdEMGPJCSS0r1X7iMq_bYccxZauIpUU",
+    authDomain: "kiosk-7944b.firebaseapp.com",
+    projectId: "kiosk-7944b",
+    storageBucket: "kiosk-7944b.firebasestorage.app",
+    messagingSenderId: "1032756887987",
+    appId: "1:1032756887987:web:9a8283e141df9df379cbc6",
+    measurementId: "G-SVMMXWH88Z"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
 <main>
 	<div class="portfolio-container">
 		<div class="container">
