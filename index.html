@@ -112,5 +112,18 @@
 		</div>
 	</div>
 </main>
+	<script>
+	  document
+	    .getElementById("click-resume-home")
+	    .addEventListener("click", function () {
+	      if (!window.__logEvent) return;
+	
+	      window.__logEvent("click-resume-home", {
+	        button_id: "click-resume-home",
+	        button_text: "Xem hồ sơ",
+	        page: window.location.pathname
+	      });
+	    });
+	</script>
 </body>
 </html>
