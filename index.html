@@ -127,10 +127,15 @@
 
       window.__fa.log("cta_click", {
         cta_id: "click-resume-home",
-        cta_text: "Xem hồ sơ",
+        cta_text: "Resume",
         page_path: location.pathname,
         open_type: "new_tab",
-		section:"Home"
+        section: "Home",
+        event_callback: function () {
+          // callback chỉ để đảm bảo event được gửi
+          // KHÔNG cần làm gì thêm
+          console.log("cta_click sent");
+        }
       });
     });
   });
