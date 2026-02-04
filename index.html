@@ -92,9 +92,9 @@
 </main>
 
 <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js";
-  import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-analytics.js";
-
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+  import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+	
   const firebaseConfig = {
     apiKey: "AIzaSyCLkdEMGPJCSS0r1X7iMq_bYccxZauIpUU",
     authDomain: "kiosk-7944b.firebaseapp.com",
@@ -108,14 +108,14 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 
-  // Test ngay trong module để chắc chắn logEvent tồn tại
-  console.log("[firebase] logEvent type:", typeof logEvent);
+  // Nếu dòng này không in "function" thì import analytics đang có vấn đề
+  console.log("[firebase] logEvent:", typeof logEvent);
 
   window.__fa = {
-    log: (name, params = {}) => logEvent(analytics, name, params)
+    log: (name, params = {}) => logEvent(analytics, name, params),
   };
 
-  console.log("[firebase] window.__fa ready:", !!window.__fa);
+  console.log("[firebase] __fa ready:", !!window.__fa);
 </script>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
